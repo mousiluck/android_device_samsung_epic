@@ -1,4 +1,8 @@
 key 158    MENU              WAKE_DROPPED
 key 139    HOME           WAKE_DROPPED
+<<<<<<< HEAD
 key 102     BACK              WAKE_DROPPED
+=======
+key 28     BACK              WAKE_DROPPED
+>>>>>>> 29f94e753adaa3c4b088a2c843522cee5b7e1d36
 key 107    SEARCH     	    WAKE_DROPPED

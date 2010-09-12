@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 key 1     1	WAKE_DROPPED
 key 2     2	WAKE_DROPPED
 key 3     3	WAKE_DROPPED
@@ -74,3 +75,16 @@ key 158    MENU              WAKE_DROPPED
 key 139    HOME           WAKE_DROPPED
 key 102     BACK              WAKE_DROPPED
 key 107    SEARCH     	    WAKE_DROPPED
+=======
+key 42    VOLUME_UP		WAKE
+key 58    VOLUME_DOWN		WAKE
+key 50    HOME              WAKE_DROPPED
+key 26    POWER           WAKE_DROPPED
+key 34    BACK              WAKE_DROPPED
+key 57    DPAD_LEFT         WAKE_DROPPED
+key 49    DPAD_RIGHT        WAKE_DROPPED
+key 25    DPAD_UP           WAKE_DROPPED
+key 41    DPAD_DOWN         WAKE_DROPPED
+key 33    DPAD_CENTER       WAKE_DROPPED
+key 10    UNKNOWN     	    WAKE_DROPPED
+>>>>>>> 29f94e753adaa3c4b088a2c843522cee5b7e1d36

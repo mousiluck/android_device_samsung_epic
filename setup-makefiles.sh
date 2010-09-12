@@ -14,7 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+<<<<<<< HEAD
 DEVICE=epic
+=======
+DEVICE=vibrant
+>>>>>>> 29f94e753adaa3c4b088a2c843522cee5b7e1d36
 
 mkdir -p ../../../vendor/samsung/$DEVICE
 
@@ -74,7 +78,11 @@ BOARD_GPS_LIBRARIES := libclientgps libsecgps
 
 EOF
 
+<<<<<<< HEAD
 mkdir -p ../../../vendor/samsung/$DEVICE/overlay/packages/apps/Launcher2/res/layout
+=======
+mkdir -p ../../../vendor/samsung/vibrant/overlay/packages/apps/Launcher2/res/layout
+>>>>>>> 29f94e753adaa3c4b088a2c843522cee5b7e1d36
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/samsung/vibrant/overlay/packages/apps/Launcher2/res/layout/all_apps.xml
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2010 The Android Open Source Project
