@@ -1,4 +1,4 @@
 proprietary/
 
-Thumbs.db
-desktop.ini
+recovery/images/Thumbs.db
+overlay/frameworks/base/core/res/res/drawable-hdpi/Thumbs.db

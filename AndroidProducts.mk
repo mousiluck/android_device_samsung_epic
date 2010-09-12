@@ -18,8 +18,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-<<<<<<< HEAD
     $(LOCAL_DIR)/full_epic.mk
-=======
-    $(LOCAL_DIR)/full_vibrant.mk
->>>>>>> 29f94e753adaa3c4b088a2c843522cee5b7e1d36
