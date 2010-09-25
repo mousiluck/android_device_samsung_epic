@@ -168,6 +168,9 @@ PRODUCT_COPY_FILES += \
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_PROPERTY_OVERRIDES += \
+	ro.com.google.clientidbase=android-sprint-us \
+	ro.cdma.home.operator.numeric=310120 \
+	ro.cdma.home.operator.alpha=Sprint \
     dalvik.vm.startheapsize=8m \
     dalvik.vm.heapsize=48m
 
