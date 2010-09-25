@@ -2,7 +2,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := Samsung Epic 4G
+PRODUCT_NAME := cyanogen_epic
 PRODUCT_DEVICE := epic
 PRODUCT_MODEL := SPH-D700
 PRODUCT_BRAND := samsung
