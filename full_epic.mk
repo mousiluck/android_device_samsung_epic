@@ -25,6 +25,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=eth0 \
     wifi.supplicant_scan_interval=15
 
+#ppp-stuff
 
 
 # Install the features available on this device.
@@ -41,6 +42,26 @@ PRODUCT_COPY_FILES += \
 #
 # Copy epic specific prebuilt files
 #
+#
+# Vold
+#
+PRODUCT_COPY_FILES += \
+    device/samsung/epic/apns-conf.xml:system/etc/apns-conf.xml
+
+#
+#PPP aka data on epic 4g cdma AKA SAMSUNG STYLE!
+#
+PRODUCT_COPY_FILES += \
+    device/samsung/epic/prebuilt/ppp/pppd_runner:system/bin/pppd_runner \
+    device/samsung/epic/prebuilt/ppp/pppd:system/bin/pppd \
+    device/samsung/epic/prebuilt/ppp/init.cdma-pppd:system/etc/init.cdma-pppd \
+    device/samsung/epic/prebuilt/ppp/init.gprs-pppd:system/etc/init.gprs-pppd \
+    device/samsung/epic/prebuilt/ppp/chap-secrets:system/etc/ppp/chap-secrets \
+    device/samsung/epic/prebuilt/ppp/ip-up:system/etc/ppp/ip-up \
+    device/samsung/epic/prebuilt/ppp/ip-down:system/etc/ppp/ip-down \
+    device/samsung/epic/prebuilt/ppp/ip-up-vpn:system/etc/ppp/ip-up-vpn \
+    device/samsung/epic/prebuilt/ppp/pap-secrets:system/etc/ppp/pap-secrets \
+    device/samsung/epic/prebuilt/ppp/options:system/etc/ppp/options
 
 #
 # Wifi

@@ -1,908 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2008 The Android Open Source Project
 
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
   
-
+          http://www.apache.org/licenses/LICENSE-2.0
   
-
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-        <title>apns-conf.xml at froyo from CyanogenMod's android_device_htc_supersonic - GitHub</title>
-    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
-    <link rel="fluid-icon" href="http://github.com/fluidicon.png" title="GitHub" />
-
-    <link href="http://assets1.github.com/stylesheets/bundle_common.css?accc094c859fe2c8c9c94e58a43e0af05c44b8fd" media="screen" rel="stylesheet" type="text/css" />
-<link href="http://assets0.github.com/stylesheets/bundle_github.css?accc094c859fe2c8c9c94e58a43e0af05c44b8fd" media="screen" rel="stylesheet" type="text/css" />
-
-    <script type="text/javascript" charset="utf-8">
-      var GitHub = {}
-      var github_user = 'noobnl'
-      
-    </script>
-    <script src="http://assets2.github.com/javascripts/jquery/jquery-1.4.2.min.js?accc094c859fe2c8c9c94e58a43e0af05c44b8fd" type="text/javascript"></script>
-    <script src="http://assets3.github.com/javascripts/bundle_common.js?accc094c859fe2c8c9c94e58a43e0af05c44b8fd" type="text/javascript"></script>
-<script src="http://assets3.github.com/javascripts/bundle_github.js?accc094c859fe2c8c9c94e58a43e0af05c44b8fd" type="text/javascript"></script>
-
-        <script type="text/javascript" charset="utf-8">
-      GitHub.spy({
-        repo: "CyanogenMod/android_device_htc_supersonic"
-      })
-    </script>
-
-    
-  
-    
-  
-
-  <link href="http://github.com/CyanogenMod/android_device_htc_supersonic/commits/froyo.atom" rel="alternate" title="Recent Commits to android_device_htc_supersonic:froyo" type="application/atom+xml" />
-
-        <meta name="description" content="Device configuration for HTC Supersonic (EVO 4G)" />
-    <script type="text/javascript">
-      GitHub.nameWithOwner = GitHub.nameWithOwner || "CyanogenMod/android_device_htc_supersonic";
-      GitHub.currentRef = 'froyo';
-    </script>
-  
-
-            <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-3769691-2']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script');
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        ga.setAttribute('async', 'true');
-        document.documentElement.firstChild.appendChild(ga);
-      })();
-    </script>
-
-  </head>
-
-  
-
-  <body class="logged_in ">
-    
-
-    
-      <script type="text/javascript">
-        var _kmq = _kmq || [];
-        function _kms(u){
-          var s = document.createElement('script'); var f = document.getElementsByTagName('script')[0]; s.type = 'text/javascript'; s.async = true;
-          s.src = u; f.parentNode.insertBefore(s, f);
-        }
-        _kms('//i.kissmetrics.com/i.js');_kms('//doug1izaerwt3.cloudfront.net/406e8bf3a2b8846ead55afb3cfaf6664523e3a54.1.js');
-      </script>
-    
-
-    
-
-    
-
-    
-
-    <div class="subnavd" id="main">
-      <div id="header" class="true">
-        
-          <a class="logo boring" href="https://github.com/">
-            <img src="/images/modules/header/logov3.png?changed" class="default" alt="github" />
-            <![if !IE]>
-            <img src="/images/modules/header/logov3-hover.png" class="hover" alt="github" />
-            <![endif]>
-          </a>
-        
-        
-          
-
-
-
-
-
-
-  
-    <div class="userbox">
-      <div class="avatarname">
-        <a href="http://github.com/noobnl"><img src="http://www.gravatar.com/avatar/f5c20c0eb3257c287c5022f49586e82f?s=140&d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png" alt="" width="20" height="20"  /></a>
-        <a href="http://github.com/noobnl" class="name">noobnl</a>
-
-        
-        
-      </div>
-      <ul class="usernav">
-        <li><a href="https://github.com/">Dashboard</a></li>
-        <li>
-          
-          <a href="https://github.com/inbox">Inbox</a>
-          <a href="https://github.com/inbox" class="unread_count ">0</a>
-        </li>
-        <li><a href="https://github.com/account">Account Settings</a></li>
-                        <li><a href="/logout">Log Out</a></li>
-      </ul>
-    </div><!-- /.userbox -->
-  
-
-
-        
-        <div class="topsearch">
-  
-    <form action="/search" id="top_search_form" method="get">
-      <a href="/search" class="advanced-search tooltipped downwards" title="Advanced Search">Advanced Search</a>
-      <input type="search" class="search my_repos_autocompleter" name="q" results="5" placeholder="Search&hellip;" /> <input type="submit" value="Search" class="button" />
-      <input type="hidden" name="type" value="Everything" />
-      <input type="hidden" name="repo" value="" />
-      <input type="hidden" name="langOverride" value="" />
-      <input type="hidden" name="start_value" value="1" />
-    </form>
-    <ul class="nav">
-      <li><a href="/explore">Explore GitHub</a></li>
-      <li><a href="http://gist.github.com">Gist</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="http://help.github.com">Help</a></li>
-    </ul>
-  
-</div>
-
-      </div>
-
-      
-      
-        
-    <div class="site">
-      <div class="pagehead repohead vis-public   ">
-        <h1>
-          <a href="/CyanogenMod">CyanogenMod</a> / <strong><a href="http://github.com/CyanogenMod/android_device_htc_supersonic">android_device_htc_supersonic</a></strong>
-          
-          
-        </h1>
-
-        
-    <ul class="actions">
-      
-
-      
-        <li class="for-owner" style="display:none"><a href="https://github.com/CyanogenMod/android_device_htc_supersonic/edit" class="minibutton btn-admin "><span><span class="icon"></span>Admin</span></a></li>
-        <li>
-          <a href="/CyanogenMod/android_device_htc_supersonic/toggle_watch" class="minibutton btn-watch " id="watch_button" rel="nofollow" style="display:none"><span><span class="icon"></span>Watch</span></a>
-          <a href="/CyanogenMod/android_device_htc_supersonic/toggle_watch" class="minibutton btn-watch " id="unwatch_button" rel="nofollow" style="display:none"><span><span class="icon"></span>Unwatch</span></a>
-        </li>
-        
-          
-            <li class="for-notforked" style="display:none"><a href="/CyanogenMod/android_device_htc_supersonic/fork" class="minibutton btn-fork " id="fork_button" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'f824ec8fcddc7a4e261173865a4dd6b663acf25e'); f.appendChild(s);f.submit();return false;"><span><span class="icon"></span>Fork</span></a></li>
-            <li class="for-hasfork" style="display:none"><a href="#" class="minibutton btn-fork " id="your_fork_button"><span><span class="icon"></span>Your Fork</span></a></li>
-          
-
-          <li id='pull_request_item' class='nspr' style='display:none'><a href="/CyanogenMod/android_device_htc_supersonic/pull/new/froyo" class="minibutton btn-pull-request "><span><span class="icon"></span>Pull Request</span></a></li>
-          <li><a href="#" class="minibutton btn-download " id="download_button"><span><span class="icon"></span>Download Source</span></a></li>
-        
-      
-      
-      <li class="repostats">
-        <ul class="repo-stats">
-          <li class="watchers"><a href="/CyanogenMod/android_device_htc_supersonic/watchers" title="Watchers" class="tooltipped downwards">34</a></li>
-          <li class="forks"><a href="/CyanogenMod/android_device_htc_supersonic/network" title="Forks" class="tooltipped downwards">9</a></li>
-        </ul>
-      </li>
-    </ul>
-
-
-        
-  <ul class="tabs">
-    <li><a href="http://github.com/CyanogenMod/android_device_htc_supersonic/tree/froyo" class="selected" highlight="repo_source">Source</a></li>
-    <li><a href="http://github.com/CyanogenMod/android_device_htc_supersonic/commits/froyo" highlight="repo_commits">Commits</a></li>
-
-    
-    <li><a href="/CyanogenMod/android_device_htc_supersonic/network" highlight="repo_network">Network (9)</a></li>
-
-    
-
-    
-
-    
-
-  
-    <li><a href="/CyanogenMod/android_device_htc_supersonic/graphs" highlight="repo_graphs">Graphs</a></li>
-
-    <li class="contextswitch nochoices">
-      <span class="toggle leftwards" >
-        <em>Branch:</em>
-        <code>froyo</code>
-      </span>
-    </li>
-  </ul>
-
-  <div style="display:none" id="pl-description"><p><em class="placeholder">click here to add a description</em></p></div>
-  <div style="display:none" id="pl-homepage"><p><em class="placeholder">click here to add a homepage</em></p></div>
-
-  <div class="subnav-bar">
-  
-  <ul>
-    <li>
-      <a href="#" class="dropdown">Switch Branches (1)</a>
-      <ul>
-        
-          
-            <li><strong>froyo &#x2713;</strong></li>
-            
-      </ul>
-    </li>
-    <li>
-      <a href="#" class="dropdown defunct">Switch Tags (0)</a>
-      
-    </li>
-    <li>
-    
-    <a href="/CyanogenMod/android_device_htc_supersonic/branches" class="manage">Branch List</a>
-    
-    </li>
-  </ul>
-</div>
-
-  
-  
-  
-  
-  
-  
-
-
-
-        
-    <div id="repo_details" class="metabox clearfix">
-      <div id="repo_details_loader" class="metabox-loader" style="display:none">Sending Request&hellip;</div>
-
-      
-
-      <div id="repository_description" rel="repository_description_edit">
-        
-          <p>Device configuration for HTC Supersonic (EVO 4G)
-            <span id="read_more" style="display:none">&mdash; <a href="#readme">Read more</a></span>
-          </p>
-        
-      </div>
-      <div id="repository_description_edit" style="display:none;" class="inline-edit">
-        <form action="/CyanogenMod/android_device_htc_supersonic/edit/update" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="f824ec8fcddc7a4e261173865a4dd6b663acf25e" /></div>
-          <input type="hidden" name="field" value="repository_description">
-          <input type="text" class="textfield" name="value" value="Device configuration for HTC Supersonic (EVO 4G)">
-          <div class="form-actions">
-            <button class="minibutton"><span>Save</span></button> &nbsp; <a href="#" class="cancel">Cancel</a>
-          </div>
-        </form>
-      </div>
-
-      
-      <div class="repository-homepage" id="repository_homepage" rel="repository_homepage_edit">
-        <p><a href="http://" rel="nofollow"></a></p>
-      </div>
-      <div id="repository_homepage_edit" style="display:none;" class="inline-edit">
-        <form action="/CyanogenMod/android_device_htc_supersonic/edit/update" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="f824ec8fcddc7a4e261173865a4dd6b663acf25e" /></div>
-          <input type="hidden" name="field" value="repository_homepage">
-          <input type="text" class="textfield" name="value" value="">
-          <div class="form-actions">
-            <button class="minibutton"><span>Save</span></button> &nbsp; <a href="#" class="cancel">Cancel</a>
-          </div>
-        </form>
-      </div>
-
-      <div class="rule "></div>
-
-            <div id="url_box" class="url-box">
-        <ul class="clone-urls">
-          
-            
-            <li id="http_clone_url"><a href="http://github.com/CyanogenMod/android_device_htc_supersonic.git" data-permissions="Read-Only">HTTP</a></li>
-            <li id="public_clone_url"><a href="git://github.com/CyanogenMod/android_device_htc_supersonic.git" data-permissions="Read-Only">Git Read-Only</a></li>
-          
-        </ul>
-        <input type="text" spellcheck="false" id="url_field" class="url-field" />
-              <span style="display:none" id="url_box_clippy"></span>
-      <span id="clippy_tooltip_url_box_clippy" class="clippy-tooltip tooltipped" title="copy to clipboard">
-      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
-              width="14"
-              height="14"
-              class="clippy"
-              id="clippy" >
-      <param name="movie" value="http://assets2.github.com/flash/clippy.swf?v5"/>
-      <param name="allowScriptAccess" value="always" />
-      <param name="quality" value="high" />
-      <param name="scale" value="noscale" />
-      <param NAME="FlashVars" value="id=url_box_clippy&amp;copied=&amp;copyto=">
-      <param name="bgcolor" value="#FFFFFF">
-      <param name="wmode" value="opaque">
-      <embed src="http://assets2.github.com/flash/clippy.swf?v5"
-             width="14"
-             height="14"
-             name="clippy"
-             quality="high"
-             allowScriptAccess="always"
-             type="application/x-shockwave-flash"
-             pluginspage="http://www.macromedia.com/go/getflashplayer"
-             FlashVars="id=url_box_clippy&amp;copied=&amp;copyto="
-             bgcolor="#FFFFFF"
-             wmode="opaque"
-      />
-      </object>
-      </span>
-
-        <p id="url_description">This URL has <strong>Read+Write</strong> access</p>
-      </div>
-    </div>
-
-
-        
-
-      </div><!-- /.pagehead -->
-
-      
-
-
-
-
-
-
-
-
-
-<script type="text/javascript">
-  GitHub.currentCommitRef = 'froyo'
-  GitHub.currentRepoOwner = 'CyanogenMod'
-  GitHub.currentRepo = "android_device_htc_supersonic"
-  GitHub.downloadRepo = '/CyanogenMod/android_device_htc_supersonic/archives/froyo'
-  GitHub.revType = "ref"
-
-  GitHub.controllerName = "blob"
-  GitHub.actionName     = "show"
-  GitHub.currentAction  = "blob#show"
-
-  
-    GitHub.hasWriteAccess = false
-    GitHub.hasAdminAccess = false
-    GitHub.watchingRepo = false
-    GitHub.ignoredRepo = false
-    GitHub.hasForkOfRepo = ""
-    GitHub.hasForked = false
-  
-
-  
-</script>
-
-
-
-
-
-
-
-
-
-
-  <div id="commit">
-    <div class="group">
-        
-  <div class="envelope commit">
-    <div class="human">
-      
-        <div class="message"><pre><a href="/CyanogenMod/android_device_htc_supersonic/commit/244452ef806669998228c97909e4abbf0a155516">Merge "supersonic: Fix generic product name" into froyo</a> </pre></div>
-      
-
-      <div class="actor">
-        <div class="gravatar">
-          
-          <img src="http://www.gravatar.com/avatar/345ef36929e4ecae65ed8fdee4ec92d0?s=140&d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png" alt="" width="30" height="30"  />
-        </div>
-        <div class="name"><a href="/cyanogen">cyanogen</a> <span>(author)</span></div>
-        <div class="date">
-          <abbr class="relatize" title="2010-09-23 07:22:44">Thu Sep 23 07:22:44 -0700 2010</abbr>
-        </div>
-      </div>
-
-      
-        <div class="actor">
-          <div class="gravatar">
-            <img src="http://www.gravatar.com/avatar/027bd4445eb83dfd99ca7171834d33cf?s=140&d=http%3A%2F%2Fgithub.com%2Fimages%2Fgravatars%2Fgravatar-140.png" alt="" width="30" height="30"  />
-          </div>
-          <div class="name">Gerrit Code Review <span>(committer)</span></div>
-          <div class="date"><abbr class="relatize" title="2010-09-23 07:22:44">Thu Sep 23 07:22:44 -0700 2010</abbr></div>
-        </div>
-      
-
-    </div>
-    <div class="machine">
-      <span>c</span>ommit&nbsp;&nbsp;<a href="/CyanogenMod/android_device_htc_supersonic/commit/244452ef806669998228c97909e4abbf0a155516" hotkey="c">244452ef806669998228</a><br />
-      <span>t</span>ree&nbsp;&nbsp;&nbsp;&nbsp;<a href="/CyanogenMod/android_device_htc_supersonic/tree/244452ef806669998228c97909e4abbf0a155516" hotkey="t">83a8bf3d4989afe65442</a><br />
-      
-        <span>p</span>arent&nbsp;
-        
-        <a href="/CyanogenMod/android_device_htc_supersonic/tree/1b061d8d4bfca5506ef9f07801cfddbb57618bae" hotkey="p">1b061d8d4bfca5506ef9</a>
-      
-        <span>p</span>arent&nbsp;
-        
-        <a href="/CyanogenMod/android_device_htc_supersonic/tree/99a6f4f5d0c256d1d0aa0011499883a0fcd1c84d" hotkey="p">99a6f4f5d0c256d1d0aa</a>
-      
-
-    </div>
-  </div>
-
-    </div>
-  </div>
-
-
-
-  
-    <div id="path">
-      <b><a href="/CyanogenMod/android_device_htc_supersonic/tree/froyo">android_device_htc_supersonic</a></b> / apns-conf.xml       <span style="display:none" id="clippy_4102">apns-conf.xml</span>
-      
-      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
-              width="110"
-              height="14"
-              class="clippy"
-              id="clippy" >
-      <param name="movie" value="http://assets0.github.com/flash/clippy.swf?v5"/>
-      <param name="allowScriptAccess" value="always" />
-      <param name="quality" value="high" />
-      <param name="scale" value="noscale" />
-      <param NAME="FlashVars" value="id=clippy_4102&amp;copied=copied!&amp;copyto=copy to clipboard">
-      <param name="bgcolor" value="#FFFFFF">
-      <param name="wmode" value="opaque">
-      <embed src="http://assets0.github.com/flash/clippy.swf?v5"
-             width="110"
-             height="14"
-             name="clippy"
-             quality="high"
-             allowScriptAccess="always"
-             type="application/x-shockwave-flash"
-             pluginspage="http://www.macromedia.com/go/getflashplayer"
-             FlashVars="id=clippy_4102&amp;copied=copied!&amp;copyto=copy to clipboard"
-             bgcolor="#FFFFFF"
-             wmode="opaque"
-      />
-      </object>
-      
-
-    </div>
-
-    <div id="files">
-      <div class="file">
-        <div class="meta">
-          <div class="info">
-            <span class="icon"><img alt="Txt" height="16" src="http://assets1.github.com/images/icons/txt.png?63f5447c5bc2add995e74c46c6971a392b0dcbd8" width="16" /></span>
-            <span class="mode" title="File Mode">100644</span>
-            
-              <span>28 lines (22 sloc)</span>
-            
-            <span>1.271 kb</span>
-          </div>
-          <ul class="actions">
-            
-              <li><a id="file-edit-link" href="#" rel="/CyanogenMod/android_device_htc_supersonic/file-edit/__ref__/apns-conf.xml">edit</a></li>
-            
-            <li><a href="/CyanogenMod/android_device_htc_supersonic/raw/froyo/apns-conf.xml" id="raw-url">raw</a></li>
-            
-              <li><a href="/CyanogenMod/android_device_htc_supersonic/blame/froyo/apns-conf.xml">blame</a></li>
-            
-            <li><a href="/CyanogenMod/android_device_htc_supersonic/commits/froyo/apns-conf.xml">history</a></li>
-          </ul>
-        </div>
-        
-  <div class="data type-xml">
-    
-      <table cellpadding="0" cellspacing="0">
-        <tr>
-          <td>
-            <pre class="line_numbers"><span id="LID1" rel="#L1">1</span>
-<span id="LID2" rel="#L2">2</span>
-<span id="LID3" rel="#L3">3</span>
-<span id="LID4" rel="#L4">4</span>
-<span id="LID5" rel="#L5">5</span>
-<span id="LID6" rel="#L6">6</span>
-<span id="LID7" rel="#L7">7</span>
-<span id="LID8" rel="#L8">8</span>
-<span id="LID9" rel="#L9">9</span>
-<span id="LID10" rel="#L10">10</span>
-<span id="LID11" rel="#L11">11</span>
-<span id="LID12" rel="#L12">12</span>
-<span id="LID13" rel="#L13">13</span>
-<span id="LID14" rel="#L14">14</span>
-<span id="LID15" rel="#L15">15</span>
-<span id="LID16" rel="#L16">16</span>
-<span id="LID17" rel="#L17">17</span>
-<span id="LID18" rel="#L18">18</span>
-<span id="LID19" rel="#L19">19</span>
-<span id="LID20" rel="#L20">20</span>
-<span id="LID21" rel="#L21">21</span>
-<span id="LID22" rel="#L22">22</span>
-<span id="LID23" rel="#L23">23</span>
-<span id="LID24" rel="#L24">24</span>
-<span id="LID25" rel="#L25">25</span>
-<span id="LID26" rel="#L26">26</span>
-<span id="LID27" rel="#L27">27</span>
-<span id="LID28" rel="#L28">28</span>
-</pre>
-          </td>
-          <td width="100%">
-            
-              <div class="highlight"><pre><div class='line' id='LC1'><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></div><div class='line' id='LC2'><span class="c">&lt;!-- Copyright (C) 2008 The Android Open Source Project</span></div><div class='line' id='LC3'><br/></div><div class='line' id='LC4'><span class="c">     Licensed under the Apache License, Version 2.0 (the "License");</span></div><div class='line' id='LC5'><span class="c">     you may not use this file except in compliance with the License.</span></div><div class='line' id='LC6'><span class="c">     You may obtain a copy of the License at</span></div><div class='line' id='LC7'><br/></div><div class='line' id='LC8'><span class="c">          http://www.apache.org/licenses/LICENSE-2.0</span></div><div class='line' id='LC9'><br/></div><div class='line' id='LC10'><span class="c">     Unless required by applicable law or agreed to in writing, software</span></div><div class='line' id='LC11'><span class="c">     distributed under the License is distributed on an "AS IS" BASIS,</span></div><div class='line' id='LC12'><span class="c">     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div><div class='line' id='LC13'><span class="c">     See the License for the specific language governing permissions and</span></div><div class='line' id='LC14'><span class="c">     limitations under the License.</span></div><div class='line' id='LC15'><span class="c">--&gt;</span></div><div class='line' id='LC16'><br/></div><div class='line' id='LC17'><span class="c">&lt;!-- This file contains fake APNs that are necessary for the emulator</span></div><div class='line' id='LC18'><span class="c">     to talk to the network.  It should only be installed for SDK builds.</span></div><div class='line' id='LC19'><br/></div><div class='line' id='LC20'><span class="c">     This file is not installed by the local Android.mk, it&#39;s installed using</span></div><div class='line' id='LC21'><span class="c">     a PRODUCT_COPY_FILES line in the sdk section of the toplevel Makefile.</span></div><div class='line' id='LC22'><span class="c">--&gt;</span></div><div class='line' id='LC23'><span class="nt">&lt;apns</span> <span class="na">version=</span><span class="s">"6"</span><span class="nt">&gt;</span></div><div class='line' id='LC24'><span class="c">&lt;!-- use empty string to specify no proxy or port --&gt;</span></div><div class='line' id='LC25'>&nbsp;&nbsp;<span class="nt">&lt;apn</span> <span class="na">carrier=</span><span class="s">"CDMA"</span> <span class="na">mcc=</span><span class="s">"310"</span> <span class="na">mnc=</span><span class="s">"120"</span> <span class="na">apn=</span><span class="s">"0"</span> <span class="na">port=</span><span class="s">""</span> <span class="na">mmsproxy=</span><span class="s">""</span> <span class="na">mmsport=</span><span class="s">""</span> <span class="na">mmsc=</span><span class="s">""</span> <span class="na">type=</span><span class="s">"*"</span><span class="nt">/&gt;</span></div><div class='line' id='LC26'>&nbsp;&nbsp;<span class="nt">&lt;apn</span> <span class="na">carrier=</span><span class="s">"CDMA"</span> <span class="na">mcc=</span><span class="s">"310"</span> <span class="na">mnc=</span><span class="s">"120"</span> <span class="na">apn=</span><span class="s">"1"</span> <span class="na">port=</span><span class="s">""</span> <span class="na">mmsproxy=</span><span class="s">""</span> <span class="na">mmsport=</span><span class="s">""</span> <span class="na">mmsc=</span><span class="s">"http://mms.sprintpcs.com"</span> <span class="nt">/&gt;</span></div><div class='line' id='LC27'><span class="nt">&lt;/apns&gt;</span></div><div class='line' id='LC28'><br/></div></pre></div>
-            
-          </td>
-        </tr>
-      </table>
-    
-  </div>
-
-
-      </div>
-    </div>
-
-  
-
-
-    </div>
-  
-      
-    </div>
-
-    <div id="footer" class="clearfix">
-      <div class="site">
-        <div class="sponsor">
-          <a href="http://www.rackspace.com" class="logo">
-            <img alt="Dedicated Server" src="http://assets3.github.com/images/modules/footer/rackspace_logo.png?accc094c859fe2c8c9c94e58a43e0af05c44b8fd" />
-          </a>
-          Powered by the <a href="http://www.rackspace.com ">Dedicated
-          Servers</a> and<br/> <a href="http://www.rackspacecloud.com">Cloud
-          Computing</a> of Rackspace Hosting<span>&reg;</span>
-        </div>
-
-        <ul class="links">
-          <li class="blog"><a href="http://github.com/blog">Blog</a></li>
-          <li><a href="http://support.github.com?sso=_-D9qfwBNALVWtVhGCwVCzX3G3akBoO36XQ8M-kMER3mItaw2V5DpBTBMMTZiae43qUNR1cQki0bNTiThDamNjMR7ce2iPqqPZLTg9saFgi7ztXE9y8FSwThFlsaF-Zjxgzy7ieL8pFO8mMfHKKNYRrgLgVJE3wRMkj6NKek0Y3q4RCL0Mg9L7Qm_C8kXxCHEUYRs31QxlREUpmQiRV69-jfEexx2jjzRv-AKS2zZUw">Support</a></li>
-          <li><a href="http://github.com/training">Training</a></li>
-          <li><a href="http://jobs.github.com">Job Board</a></li>
-          <li><a href="http://shop.github.com">Shop</a></li>
-          <li><a href="http://github.com/contact">Contact</a></li>
-          <li><a href="http://develop.github.com">API</a></li>
-          <li><a href="http://status.github.com">Status</a></li>
-        </ul>
-        <ul class="sosueme">
-          <li class="main">&copy; 2010 <span id="_rrt" title="0.05223s from fe4.rs.github.com">GitHub</span> Inc. All rights reserved.</li>
-          <li><a href="/site/terms">Terms of Service</a></li>
-          <li><a href="/site/privacy">Privacy</a></li>
-          <li><a href="http://github.com/security">Security</a></li>
-        </ul>
-      </div>
-    </div><!-- /#footer -->
-
-    
-      
-      
-        <!-- current locale:  -->
-        <div class="locales">
-          <div class="site">
-
-            <ul class="choices clearfix limited-locales">
-              <li><span class="current">English</span></li>
-              
-                
-                  <li><a rel="nofollow" href="?locale=de">Deutsch</a></li>
-                
-              
-                
-                  <li><a rel="nofollow" href="?locale=fr">Français</a></li>
-                
-              
-                
-                  <li><a rel="nofollow" href="?locale=ja">日本語</a></li>
-                
-              
-                
-                  <li><a rel="nofollow" href="?locale=pt-BR">Português (BR)</a></li>
-                
-              
-                
-                  <li><a rel="nofollow" href="?locale=ru">Русский</a></li>
-                
-              
-                
-                  <li><a rel="nofollow" href="?locale=zh">中文</a></li>
-                
-              
-              <li class="all"><a href="#" class="minibutton btn-forward js-all-locales"><span><span class="icon"></span>See all available languages</span></a></li>
-            </ul>
-
-            <div class="all-locales clearfix">
-              <h3>Your current locale selection: <strong>English</strong>. Choose another?</h3>
-              
-              
-                <ul class="choices">
-                  
-                    
-                      <li><a rel="nofollow" href="?locale=en">English</a></li>
-                    
-                  
-                    
-                      <li><a rel="nofollow" href="?locale=af">Afrikaans</a></li>
-                    
-                  
-                    
-                      <li><a rel="nofollow" href="?locale=ca">Català</a></li>
-                    
-                  
-                    
-                      <li><a rel="nofollow" href="?locale=cs">Čeština</a></li>
-                    
-                  
-                </ul>
-              
-                <ul class="choices">
-                  
-                    
-                      <li><a rel="nofollow" href="?locale=de">Deutsch</a></li>
-                    
-                  
-                    
-                      <li><a rel="nofollow" href="?locale=es">Español</a></li>
-                    
-                  
-                    
-                      <li><a rel="nofollow" href="?locale=fr">Français</a></li>
-                    
-                  
-                    
-                      <li><a rel="nofollow" href="?locale=hr">Hrvatski</a></li>
-                    
-                  
-                </ul>
-              
-                <ul class="choices">
-                  
-                    
-                      <li><a rel="nofollow" href="?locale=id">Indonesia</a></li>
-                    
-                  
-                    
-                      <li><a rel="nofollow" href="?locale=it">Italiano</a></li>
-                    
-                  
-                    
-                      <li><a rel="nofollow" href="?locale=ja">日本語</a></li>
-                    
-                  
-                    
-                      <li><a rel="nofollow" href="?locale=nl">Nederlands</a></li>
-                    
-                  
-                </ul>
-              
-                <ul class="choices">
-                  
-                    
-                      <li><a rel="nofollow" href="?locale=no">Norsk</a></li>
-                    
-                  
-                    
-                      <li><a rel="nofollow" href="?locale=pl">Polski</a></li>
-                    
-                  
-                    
-                      <li><a rel="nofollow" href="?locale=pt-BR">Português (BR)</a></li>
-                    
-                  
-                    
-                      <li><a rel="nofollow" href="?locale=ru">Русский</a></li>
-                    
-                  
-                </ul>
-              
-                <ul class="choices">
-                  
-                    
-                      <li><a rel="nofollow" href="?locale=sr">Српски</a></li>
-                    
-                  
-                    
-                      <li><a rel="nofollow" href="?locale=sv">Svenska</a></li>
-                    
-                  
-                    
-                      <li><a rel="nofollow" href="?locale=zh">中文</a></li>
-                    
-                  
-                </ul>
-              
-            </div>
-
-          </div>
-          <div class="fade"></div>
-        </div>
-      
-    
-
-    <script>window._auth_token = "f824ec8fcddc7a4e261173865a4dd6b663acf25e"</script>
-    <div id="keyboard_shortcuts_pane" style="display:none">
-  <h2>Keyboard Shortcuts</h2>
-
-  <div class="columns threecols">
-    <div class="column first">
-      <h3>Site wide shortcuts</h3>
-      <dl class="keyboard-mappings">
-        <dt>s</dt>
-        <dd>Focus site search</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>?</dt>
-        <dd>Bring up this help dialog</dd>
-      </dl>
-    </div><!-- /.column.first -->
-    <div class="column middle">
-      <h3>Commit list</h3>
-      <dl class="keyboard-mappings">
-        <dt>j</dt>
-        <dd>Move selected down</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>k</dt>
-        <dd>Move selected up</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>t</dt>
-        <dd>Open tree</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>p</dt>
-        <dd>Open parent</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>c <em>or</em> o <em>or</em> enter</dt>
-        <dd>Open commit</dd>
-      </dl>
-    </div><!-- /.column.first -->
-    <div class="column last">
-      <h3>Pull request list</h3>
-      <dl class="keyboard-mappings">
-        <dt>j</dt>
-        <dd>Move selected down</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>k</dt>
-        <dd>Move selected up</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>o <em>or</em> enter</dt>
-        <dd>Open issue</dd>
-      </dl>
-    </div><!-- /.columns.last -->
-  </div><!-- /.columns.equacols -->
-
-  <div class="rule"></div>
-
-  <h3>Issues</h3>
-
-  <div class="columns threecols">
-    <div class="column first">
-      <dl class="keyboard-mappings">
-        <dt>j</dt>
-        <dd>Move selected down</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>k</dt>
-        <dd>Move selected up</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>x</dt>
-        <dd>Toggle select target</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>o <em>or</em> enter</dt>
-        <dd>Open issue</dd>
-      </dl>
-    </div><!-- /.column.first -->
-    <div class="column middle">
-      <dl class="keyboard-mappings">
-        <dt>I</dt>
-        <dd>Mark selected as read</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>U</dt>
-        <dd>Mark selected as unread</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>e</dt>
-        <dd>Close selected</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>y</dt>
-        <dd>Remove selected from view</dd>
-      </dl>
-    </div><!-- /.column.middle -->
-    <div class="column last">
-      <dl class="keyboard-mappings">
-        <dt>c</dt>
-        <dd>Create issue</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>l</dt>
-        <dd>Create label</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>i</dt>
-        <dd>Back to inbox</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>u</dt>
-        <dd>Back to issues</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>/</dt>
-        <dd>Focus issues search</dd>
-      </dl>
-    </div>
-  </div>
-
-  <div class="rule"></div>
-
-  <h3>Network Graph</h3>
-  <div class="columns equacols">
-    <div class="column first">
-      <dl class="keyboard-mappings">
-        <dt>← <em>or</em> h</dt>
-        <dd>Scroll left</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>→ <em>or</em> l</dt>
-        <dd>Scroll right</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>↑ <em>or</em> k</dt>
-        <dd>Scroll up</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>↓ <em>or</em> j</dt>
-        <dd>Scroll down</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>t</dt>
-        <dd>Toggle visibility of head labels</dd>
-      </dl>
-    </div><!-- /.column.first -->
-    <div class="column last">
-      <dl class="keyboard-mappings">
-        <dt>shift ← <em>or</em> shift h</dt>
-        <dd>Scroll all the way left</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>shift → <em>or</em> shift l</dt>
-        <dd>Scroll all the way right</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>shift ↑ <em>or</em> shift k</dt>
-        <dd>Scroll all the way up</dd>
-      </dl>
-      <dl class="keyboard-mappings">
-        <dt>shift ↓ <em>or</em> shift j</dt>
-        <dd>Scroll all the way down</dd>
-      </dl>
-    </div><!-- /.column.last -->
-  </div>
-
-</div>
-    
-
-    <!--[if IE 8]>
-    <script type="text/javascript" charset="utf-8">
-      $(document.body).addClass("ie8")
-    </script>
-    <![endif]-->
-
-    <!--[if IE 7]>
-    <script type="text/javascript" charset="utf-8">
-      $(document.body).addClass("ie7")
-    </script>
-    <![endif]-->
-
-    <script type="text/javascript">
-      _kmq.push(['trackClick', 'entice_banner_link', 'Entice banner clicked']);
-      
-    </script>
-    
-  </body>
-</html>
-
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- This file contains fake APNs that are necessary for the emulator
+     to talk to the network.  It should only be installed for SDK builds.
+
+     This file is not installed by the local Android.mk, it's installed using
+     a PRODUCT_COPY_FILES line in the sdk section of the toplevel Makefile.
+-->
+
+<!-- use empty string to specify no proxy or port -->
+<!-- This version must agree with that in apps/common/res/apns.xml -->
+<!-- SecFeature.SPRINT_CDMA  -->
+<!-- mms_eclair   -->
+<apns version="6">
+   <apn carrier="Sprint"
+        mcc="310"
+        mnc="120"
+        apn="Sprint"
+        user="Sprint"
+        server="*"
+        password="*"
+        mmsc="http://mms.sprintpcs.com"
+        mmsproxy = "68.28.31.7"
+        mmsport = "80"
+        authtype="3"
+     /> <!-- SecFeature.SPRINT_CDMA : Change mmsc for D700 -->
+</apns>
+<!-- SecFeature.SPRINT_CDMA : BLOCK Below lines
+	<apns version="6">
+	    <apn carrier="Android"
+	        mcc="310"
+	        mnc="995"
+	        apn="internet"
+	        user="*"
+	        server="*"
+	        password="*"
+	        mmsc="null"
+	        type="*"
+	        authtype="0"
+	    />
+	    <apn carrier="PLUS"
+	        mcc="260"
+	        mnc="01"
+	        apn="internet"
+	        type="default"
+	        authtype="0"
+	    />
+	    <apn carrier="PLUS MMS"
+	        mmsc="http://mms.plusgsm.pl:8002"
+	        mmsproxy = "212.2.96.16"
+	        mmsport = "8080"
+	        mcc="260"
+	        mnc="01"
+	        apn="mms"
+	        type="mms"
+	        authtype="1"
+	    />
+	    <apn carrier="PLAY"
+	        mcc="260"
+	        mnc="06"
+	        apn="internet"
+	        type="default"
+	        authtype="1"
+	    />
+	    <apn carrier="PLAY MMS"
+	        mmsc="http://10.10.28.164/mms/wapenc"
+	        mmsproxy = "10.10.25.5"
+	        mmsport = "8080"
+	        mcc="260"
+	        mnc="06"
+	        apn="mms"
+	        type="mms"
+	        authtype="1"
+	    />
+	    <apn carrier="ERA"
+	        mcc="260"
+	        mnc="02"
+	        apn="erainternet"
+	        type="default"
+	        authtype="1"
+	    />
+	    <apn carrier="ERA MMS"
+	        mmsc="http://mms.era.pl/servlets/mms"
+	        mmsproxy = "213.158.194.226"
+	        mmsport = "8080"
+	        mcc="260"
+	        mnc="02"
+	        apn="eramms"
+	        type="mms"
+	        authtype="1"
+	    />
+	    <apn carrier="Orange PL"
+	        mcc="260"
+	        mnc="03"
+	        apn="internet"
+	        user="internet"
+	        password="internet"
+	        type="default"
+	        authtype="1"
+	    />
+	    <apn carrier="Orange PL MMS"
+	        mmsc="http://mms.orange.pl"
+	        mmsproxy = "192.168.6.104"
+	        mmsport = "8080"
+	        mcc="260"
+	        mnc="03"
+	        apn="mms"
+	        user="mms"
+	        password="mms"
+	        type="mms"
+	        authtype="1"
+	    />
+	    <apn carrier="Bouygues Telecom"
+	        mmsc="http://mms.bouyguestelecom.fr/mms/wapenc"
+	        mmsproxy="62.201.129.226"
+	        mmsport="8080"
+	        mcc="208"
+		      mnc="20"
+	        apn="mmsbouygtel.com"
+	        type="*"
+	        authtype="1"
+	     />
+	     <apn carrier="TIM Web"
+	        mcc="222"
+	        mnc="01"
+	        apn="ibox.tim.it"
+	        type="default"
+	        authtype="1"
+	    />
+	    <apn carrier="TIM MMS"
+	    	mmsc="http://mms.tim.it/servlets/mms"
+	        mmsproxy ="213.230.130.89"
+	        mmsport ="80"
+	        mcc="222"
+	        mnc="01"
+	        apn="mms.tim.it"
+	        type="mms"
+	        authtype="1"
+	    />
+	    <apn carrier="Vodafone IT Web"
+	        mcc="222"
+	        mnc="10"
+	        apn="web.omnitel.it"
+	        type="default"
+	        authtype="0"
+	    />
+	    <apn carrier="Vodafone IT MMS"
+	        mmsc="http://mms.vodafone.it/servlets/mms"
+	        mmsproxy = "10.128.224.10"
+	        mmsport = "80"
+	        mcc="222"
+	        mnc="10"
+	        apn="mms.vodafone.it"
+	        type="mms"
+	        authtype="0"
+	    />
+	    <apn carrier="WIND Web"
+	        mcc="222"
+	        mnc="88"
+	        apn="internet.wind.biz"
+	        type="default"
+	        authtype="1"
+	    />
+	    <apn carrier="WIND MMS"
+	        mmsc="http://mms.wind.it"
+	        mmsproxy = "212.245.244.100"
+	        mmsport = "8080"
+	        mcc="222"
+	        mnc="88"
+	        apn="mms.wind"
+	        type="mms"
+	        authtype="1"
+	    />
+	    <apn carrier="Vodafone D2"
+	        mcc="262"
+	        mnc="02"
+	        apn="web.vodafone.de"
+	        type="default"
+	        authtype="0"
+	    />
+	    <apn carrier="Vodafone D2 MMS"
+	        mmsc="http://139.7.24.1/servlets/mms"
+	        mmsproxy = "139.7.29.17"
+	        mmsport = "80"
+	        mcc="262"
+	        mnc="02"
+	        apn="event.vodafone.de"
+	        type="mms"
+	        authtype="0"
+	    />
+	    <apn carrier="Vodafone UK"
+	        mmsc="http://mms.vodafone.co.uk/servlets/mms"
+	        mmsproxy = "212.183.137.12"
+	        mmsport = "8799"
+	        proxy="212.183.137.12"
+	        port="8799"
+	        mcc="234"
+	        mnc="15"
+	        apn="wap.vodafone.co.uk"
+	        user="wap"
+	        password="wap"
+	        type="*"
+	        authtype="1"
+	    />
+	    <apn carrier="o2 de"
+	        mmsc="http://10.81.0.7:8002"
+	        mmsproxy="82.113.100.5"
+	        mmsport="8080"
+	        mcc="262"
+	        mnc="07"
+		apn="internet"
+	        type="*"
+	        authtype="0"
+	    />
+	    <apn carrier="o2 UK"
+	        mcc="234"
+	        mnc="10"
+	        apn="mobile.o2.co.uk"
+		user="o2web"
+	        password="o2web"
+	        type="default"
+	        authtype="0"
+	    />
+	    <apn carrier="o2 UK MMS"
+	        mmsc="http://mmsc.mms.o2.co.uk:8002"
+	        mmsproxy="193.113.200.195"
+	        mmsport="8080"
+	        mcc="234"
+		mnc="10"
+		user="o2wap"
+		password="password"
+		apn="wap.o2.co.uk"
+	        type="mms"
+	        authtype="0"
+	    />
+	    <apn carrier="Orange FR"
+	        mcc="208"
+	        mnc="01"
+	        apn="orange"
+	        type="default"
+	        authtype="0"
+	    />
+	    <apn carrier="Orange FR MMS"
+	        mmsc="http://mms.orange.fr"
+	        mmsproxy="192.168.10.200"
+	        mmsport="8080"
+	        mcc="208"
+	        mnc="01"
+	        apn="orange.acte"
+	        type="mms"
+	        authtype="0"
+	    />
+	    <apn carrier="Vodafone Spain"
+	        proxy="212.73.32.10"
+	        port="80"
+	        mcc="214"
+	        mnc="01"
+	        apn="airtelwap.es"
+	        user="wap@wap"
+	        password="wap125"
+	        type="default"
+	        authtype="0"
+	    />
+	    <apn carrier="Vodafone Spain MMS"
+	        mmsc="http://mmsc.vodafone.es/servlets/mms"
+	        mmsproxy="212.73.32.10"
+	        mmsport="80"
+	        mcc="214"
+	        mnc="01"
+	        apn="mms.vodafone.net"
+	        user="wap@wap"
+	        password="wap125"
+	        type="mms"
+	        authtype="0"
+	    />
+	    <apn carrier="Orange Spain"
+	        proxy="10.132.61.10"
+	        port="8080"
+	        mcc="214"
+	        mnc="03"
+	        apn="orangeworld"
+	        user="orange"
+	        password="orange"
+	        type="default"
+	        authtype="1"
+	    />
+	    <apn carrier="Orange Spain MMS"
+	        mmsc="http://mms.orange.es"
+	        mmsproxy="172.22.188.25"
+	        mmsport="8080"
+	        mcc="214"
+	        mnc="03"
+	        apn="orangemms"
+	        user="orange"
+	        password="orange"
+	        type="mms"
+	        authtype="1"
+	    />
+	    <apn carrier="T-Mobile UK"
+	     	  mmsc="http://mmsc.t-mobile.co.uk:8002"
+	        mmsproxy="149.254.201.135"
+	        mmsport="8080"
+	        mcc="234"
+	        mnc="30"
+	        apn="general.t-mobile.uk"
+	        user="t-mobile"
+	        password="tm"
+	        type="*"
+	        authtype="1"
+	    />
+	    <apn carrier="Orange UK"
+	     	  mmsc="http://mms.orange.co.uk/"
+	        mmsproxy="192.168.224.10"
+	        mmsport="8080"
+	        mcc="234"
+	        mnc="33"
+	        apn="orangeinternet"
+	        type="*"
+	        authtype="0"
+	    />
+	    <apn carrier="T-Mobile D"
+	        mmsc="http://mms.t-mobile.de/servelets/mms"
+	        mmsproxy="172.28.23.131"
+	        mmsport="8008"
+	        mcc="262"
+	        mnc="01"
+	        apn="internet.t-mobile"
+	        type="*"
+	        authtype="1"
+	    />
+	    <apn carrier="SFR"
+	        mcc="208"
+	        mnc="101"
+	        apn="sl2sfr"
+	        type="default"
+	        authtype="0"
+	    />
+	    <apn carrier="SFR-MMS"
+	        mmsc="http://mms1"
+	        mmsproxy="10.151.0.1"
+	        mmsport="8080"
+	        mcc="208"
+	        mnc="101"
+	        apn="mmssfr"
+	        type="mms"
+	        authtype="0"
+	    />
+	    <apn carrier="SFR-MMS"
+	        mmsc="http://mms1"
+	        mmsproxy="10.151.0.1"
+	        mmsport="8080"
+	        mcc="208"
+	        mnc="10"
+	        apn="mmssfr"
+	        type="mms"
+	        authtype="0"
+	    />    
+	    <apn carrier="SFR"
+	        mcc="208"
+	        mnc="10"
+	        apn="websfr"
+	        type="default"
+	        authtype="0"
+	    />
+	    <apn carrier="3"
+	     	  mmsc="http://10.216.59.240:10021/mmsc"
+	        mmsproxy="62.13.171.3"
+	        mmsport="8799"
+	        mcc="222"
+	        mnc="99"
+	        apn="tre.it"
+	        type="*"
+	        authtype="1"
+	    />
+	    <apn carrier="Orange World"
+	        proxy="212.65.63.143"
+	        port ="8080"
+	        mcc="206"
+	        mnc="10"
+	        apn="mworld.be"
+	        type="default"
+	        authtype="0"        
+	     />
+	     <apn carrier="E-Plus"
+	        mcc="262"
+	        mnc="03"
+	        apn="internet.eplus.de"
+	        user="eplus"
+	        password="internet"
+	        type="default"
+	        authtype="1"
+	     />
+	     <apn carrier="E-Plus MMS"
+	        mmsc="http://mms/eplus/"
+	        mmsproxy="212.23.97.153"
+	        mmsport="5080"
+	        mcc="262"
+	        mnc="03"
+	        apn="mms.eplus.de"
+	        user="mms"
+	        password="eplus"
+	        type="mms"
+	        authtype="1"
+	    />
+	    <apn carrier="i9"
+	        mcc="268"
+	        mnc="06"
+	        apn="internet"
+	        type="default"
+	        authtype="0"
+	     />
+    	<apn carrier="AT&amp;T 310 150" 
+		    mmsc="http://mmsc.cingular.com" 
+		    mmsproxy="wireless.cingular.com"
+		    mmsport="80"
+		    mcc="310" 
+		    mnc="150" 
+		    apn="wap.cingular" 
+		    user="" 
+		    password="" 
+		    type="*" 
+		    authtype="0"
+		/>
+		<apn carrier="AT&amp;T 310 170" 
+		    mmsc="http://mmsc.cingular.com" 
+		    mmsproxy="wireless.cingular.com"
+		    mmsport="80"
+		    mcc="310" 
+		    mnc="170" 
+		    apn="wap.cingular" 
+		    user="" 
+		    password="" 
+		    type="*" 
+		    authtype="0"
+		/>
+		<apn carrier="AT&amp;T 310 410" 
+		    mmsc="http://mmsc.cingular.com" 
+		    mmsproxy="wireless.cingular.com"
+		    mmsport="80"
+		    mcc="310" 
+		    mnc="410" 
+		    apn="wap.cingular" 
+		    user="" 
+		    password="" 
+		    type="*" 
+		    authtype="0"
+		/>
+		<apn carrier="AT&amp;T 310 380" 
+		    mmsc="http://mmsc.cingular.com" 
+		    mmsproxy="wireless.cingular.com"
+		    mmsport="80"
+		    mcc="310" 
+		    mnc="380" 
+		    apn="wap.cingular" 
+		    user="" 
+		    password="" 
+		    type="*" 
+		    authtype="0"
+		/>
+		<apn carrier="AT&amp;T 344 930" 
+		    mmsc="http://mmsc.cingular.com" 
+		    mmsproxy="wireless.cingular.com"
+		    mmsport="80"
+		    mcc="344" 
+		    mnc="930" 
+		    apn="wap.cingular" 
+		    user="" 
+		    password="" 
+		    type="*" 
+		    authtype="0"
+		/>
+		<apn carrier="AT&amp;T 366 20" 
+		    mmsc="http://mmsc.cingular.com" 
+		    mmsproxy="wireless.cingular.com"
+		    mmsport="80"
+		    mcc="366" 
+		    mnc="20" 
+		    apn="wap.cingular" 
+		    user="" 
+		    password="" 
+		    type="*" 
+		    authtype="0"
+		/>
+
+		<apn carrier="T-MOBILE US 310 200"
+			mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" 
+			mcc="310" mnc="200"
+			apn="epc.tmobile.com" 
+			user=""
+			password="" 
+			type="*" 
+			authtype="0"
+		/>
+		
+		<apn carrier="T-MOBILE US 310 160" 
+			mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" 
+			mnc="160" 
+			mcc="310" 
+			apn="epc.tmobile.com" 
+			user="" 
+			password="" 
+			type="*" 
+			authtype="0"
+		/>
+		
+		<apn carrier="T-MOBILE US 310 210" 
+			mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" 
+			mcc="310" 
+			mnc="210" 
+			apn="epc.tmobile.com" 
+			user="" 
+			password="" 
+			type="*" 
+			authtype="0"
+		/>
+		
+		<apn carrier="T-MOBILE US 310 220"
+			mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" 
+			mcc="310" 
+			mnc="220" 
+			apn="epc.tmobile.com" 
+			user="" 
+			password="" 
+			type="*" 
+			authtype="0"
+		/>
+		
+		<apn carrier="T-MOBILE US 310 230" 
+			mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" 
+			mcc="310" 
+			mnc="230" 
+			apn="epc.tmobile.com" 
+			user="" 
+			password="" 
+			type="*" 
+		authtype="0"
+		/>
+		
+		<apn carrier="T-MOBILE US 310 240" 
+			mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" 
+			mcc="310" 
+			mnc="240" 
+			apn="epc.tmobile.com" 
+			user="" 
+			password="" 
+			type="*" 
+			authtype="0"
+		/>
+		
+		<apn carrier="T-MOBILE US 310 250" 
+			mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" 
+			mcc="310" 
+			mnc="250" 
+			apn="epc.tmobile.com" 
+			user=""
+			password="" 
+			type="*" 
+			authtype="0"
+		/>
+		
+		<apn carrier="T-MOBILE US 310 260" 
+			mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" 
+			mcc="310" 
+			mnc="260" 
+			apn="epc.tmobile.com" 
+			user="" 
+			password="" 
+			type="*" 
+			authtype="0"
+		/>
+		
+		<apn carrier="T-MOBILE US 310 270" 
+			mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" 
+			mcc="310" 
+			mnc="270" 
+			apn="epc.tmobile.com" 
+			user="" 
+			password="" 
+			type="*" 
+			authtype="0"
+		/>
+		
+		<apn carrier="T-MOBILE US 310 310" 
+			mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" 
+			mcc="310" 
+			mnc="310" 
+			apn="epc.tmobile.com" 
+			user="" 
+			password="" 
+			type="*" 
+			authtype="0"
+		/>
+		
+		<apn carrier="T-MOBILE US 310 580" 
+			mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" 
+			mcc="310" 
+			mnc="580" 
+			apn="epc.tmobile.com" 
+			user="" 
+			password="" 
+			type="*" 
+			authtype="0"
+		/>
+		
+		<apn carrier="T-MOBILE US 310 660" 
+			mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" 
+			mcc="310" 
+			mnc="660" 
+			apn="epc.tmobile.com" 
+			user="" 
+			password="" 
+			type="*" 
+			authtype="0"
+		/>
+		
+		<apn carrier="T-MOBILE US 310 800" 
+			mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" 
+			mcc="310" 
+			mnc="800" 
+			apn="epc.tmobile.com" 
+			user="" 
+			password="" 
+			type="*" 
+			authtype="0"
+		/>
+		
+		<apn carrier="T-MOBILE US 310 300" 
+			mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" 
+			mcc="310" 
+			mnc="300" 
+			apn="epc.tmobile.com" 
+			user="" 
+			password="" 
+			type="*" 
+			authtype="0"
+		/>
+		
+		<apn carrier="T-MOBILE US 310 280" 
+			mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" 
+			mcc="310" 
+			mnc="280" 
+			apn="epc.tmobile.com" 
+			user="" 
+			password="" 
+			type="*" 
+			authtype="0"
+		/>
+		
+		<apn carrier="T-MOBILE US 310 490" 
+			mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" 
+			mcc="310" 
+			mnc="490" 
+			apn="epc.tmobile.com" 
+			user="" 
+			password="" 
+			type="*" 
+			authtype="0"
+		/>
+		
+		<apn carrier="T-MOBILE US 310 530" 
+			mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" 
+			mcc="310" 
+			mnc="530" 
+			apn="epc.tmobile.com" 
+			user="" 
+			password="" 
+			type="*" 
+			authtype="0"
+		/>
+		
+		<apn carrier="T-MOBILE US 310 590" 
+			mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" 
+			mcc="310" 
+			mnc="590" 
+			apn="epc.tmobile.com" 
+			user="" 
+			password="" 
+			type="*" 
+			authtype="0"
+		/>
+		
+		<apn carrier="T-MOBILE US 310 640" 
+			mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" 
+			mcc="310" 
+			mnc="640" 
+			apn="epc.tmobile.com" 
+			user="" 
+			password="" 
+			type="*" 
+			authtype="0"
+		/>
+</apns>
+-->
