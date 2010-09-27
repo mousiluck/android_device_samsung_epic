@@ -42,8 +42,9 @@ PRODUCT_COPY_FILES += \
 #
 # Copy epic specific prebuilt files
 #
+
 #
-# Vold
+# mms support!
 #
 PRODUCT_COPY_FILES += \
     device/samsung/epic/apns-conf.xml:system/etc/apns-conf.xml
