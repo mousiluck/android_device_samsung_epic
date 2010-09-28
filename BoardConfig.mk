@@ -85,4 +85,5 @@ BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk0
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk0p1
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk0p2
 #BOARD_USES_BMLUTILS := true
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := true
 TARGET_PREBUILT_KERNEL := device/samsung/epic/kernel
