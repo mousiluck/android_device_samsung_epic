@@ -1,13 +1,6 @@
 #
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Discard inherited values and use our own instead.
-PRODUCT_NAME := cyanogen_epic
-PRODUCT_DEVICE := epic
-PRODUCT_MODEL := SPH-D700
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := Samsung
-
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
@@ -15,7 +8,6 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 PRODUCT_COPY_FILES += \
     device/samsung/epic/init.smdkc110.rc:root/init.smdkc110.rc
 
-PRODUCT_POLICY := android.policy_phone
 
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -25,7 +17,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=eth0 \
     wifi.supplicant_scan_interval=15
 
-#ppp-stuff
+
 
 
 # Install the features available on this device.
@@ -199,5 +191,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # epic uses high-density artwork where available
 PRODUCT_LOCALES := hdpi
 
-
-
+$(call inherit-product, build/target/product/full.mk)
+PRODUCT_NAME := cyanogen_epic
+PRODUCT_DEVICE := epic
+PRODUCT_MODEL := SPH-D700
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := Samsung

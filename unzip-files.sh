@@ -44,7 +44,7 @@ PRODUCT_COPY_FILES := \\
     vendor/samsung/__DEVICE__/proprietary/libgps.so:obj/lib/libgps.so \\
     vendor/samsung/__DEVICE__/proprietary/libcamera.so:obj/lib/libcamera.so
 
-# All the blobs necessary for vibrant
+# All the blobs necessary for epic
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/akmd:/system/bin/akmd \\
     vendor/samsung/__DEVICE__/proprietary/mm-venc-omx-test:/system/bin/mm-venc-omx-test \\
