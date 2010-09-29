@@ -94,6 +94,47 @@ PRODUCT_COPY_FILES += \
     device/samsung/epic/prebuilt/hw/gralloc.s5pc110.so:system/lib/hw/gralloc.s5pc110.so
 
 #
+# gps daemon, libs
+#
+PRODUCT_COPY_FILES += \
+    device/samsung/epic/prebuilt/gps/gpsd/8c7fccef.0:system/bin/gpsd/8c7fccef.0 \
+	device/samsung/epic/prebuilt/gps/gpsd/66ca3eb6.0:system/bin/gpsd/66ca3eb6.0 \
+	device/samsung/epic/prebuilt/gps/gpsd/803ca020.0:system/bin/gpsd//803ca020.0 \
+	device/samsung/epic/prebuilt/gps/gpsd/7651b327.0:system/bin/gpsd/7651b327.0 \
+	device/samsung/epic/prebuilt/gps/gpsd/c9dbfc2e.0:system/bin/gpsd/c9dbfc2e.0 \
+	device/samsung/epic/prebuilt/gps/gpsd/ddc328ff.0:system/bin/gpsd/ddc328ff.0 \	
+	device/samsung/epic/prebuilt/gps/gpsd/ed62f4e3.0:system/bin/gpsd/ed62f4e3.0 \	
+	device/samsung/epic/prebuilt/gps/gpsd/f0b6e66f.0:system/bin/gpsd/f0b6e66f.0 \		
+	device/samsung/epic/prebuilt/gps/gpsd/glgps_samsungJupiter:system/bin/gpsd/glgps_samsungJupiter \
+	device/samsung/epic/prebuilt/gps/libgps.so:system/lib/libgps.so \	
+	device/samsung/epic/prebuilt/gps/libsecgps.so:system/lib/libsecgps.so \
+	device/samsung/epic/prebuilt/gps/jupiter.xml:system/jupiter.xml
+
+#
+# WIMAX FOR VICTORY!
+#
+PRODUCT_COPY_FILES += \
+	device/samsung/epic/prebuilt/wimax/libSECmWiMAXcAPI.so:system/lib/libSECmWiMAXcAPI.so \
+	device/samsung/epic/prebuilt/wimax/libWiMAXLineTest.so:system/lib/libWiMAXLineTest.so \
+	device/samsung/epic/prebuilt/wimax/libWiMAXNative.so:system/lib/libWiMAXNative.so \
+	device/samsung/epic/prebuilt/wimax/libWiMAXNativeODB.so:system/lib/libWiMAXNativeODB.so \
+	device/samsung/epic/prebuilt/wimax/libwimaxne.so:system/lib/libwimaxne.so \
+	device/samsung/epic/prebuilt/wimax/libwimaxwtm.so:system/lib/libwimaxwtm.so \
+	device/samsung/epic/prebuilt/wimax/wimax_boot.bin:system/etc/wimax_boot.bin \
+	device/samsung/epic/prebuilt/wimax/wimaxfw.bin:system/etc/wimaxfw.bin \
+	device/samsung/epic/prebuilt/wimax/wimaxloader.bin:system/etc/wimaxloader.bin \
+
+#
+# sensor daemon and libs
+#
+PRODUCT_COPY_FILES += \
+	device/samsung/epic/prebuilt/sensor/libsensor_yamaha.so:system/lib/libsensor_yamaha.so \
+	device/samsung/epic/prebuilt/sensor/libsensor_yamaha_test.so:system/lib/libsensor_yamaha_test.so \
+	device/samsung/epic/prebuilt/sensor/sensorserver_yamaha:system/bin/sensorserver_yamaha \	
+	device/samsung/epic/prebuilt/sensor/sensorcalibutil_yamaha:system/bin/sensorcalibutil_yamaha \	
+	device/samsung/epic/prebuilt/sensor/sensorstatutil_yamaha:system/bin/sensorstatutil_yamaha
+
+#
 # Keys
 #
 PRODUCT_COPY_FILES += \
@@ -192,7 +233,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_LOCALES := hdpi
 
 $(call inherit-product, build/target/product/full.mk)
-PRODUCT_NAME := cyanogen_epic
+PRODUCT_NAME := full_epic
 PRODUCT_DEVICE := epic
 PRODUCT_MODEL := SPH-D700
 PRODUCT_BRAND := samsung
