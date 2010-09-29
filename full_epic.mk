@@ -102,11 +102,11 @@ PRODUCT_COPY_FILES += \
 	device/samsung/epic/prebuilt/gps/gpsd/803ca020.0:system/bin/gpsd//803ca020.0 \
 	device/samsung/epic/prebuilt/gps/gpsd/7651b327.0:system/bin/gpsd/7651b327.0 \
 	device/samsung/epic/prebuilt/gps/gpsd/c9dbfc2e.0:system/bin/gpsd/c9dbfc2e.0 \
-	device/samsung/epic/prebuilt/gps/gpsd/ddc328ff.0:system/bin/gpsd/ddc328ff.0 \	
-	device/samsung/epic/prebuilt/gps/gpsd/ed62f4e3.0:system/bin/gpsd/ed62f4e3.0 \	
-	device/samsung/epic/prebuilt/gps/gpsd/f0b6e66f.0:system/bin/gpsd/f0b6e66f.0 \		
+	device/samsung/epic/prebuilt/gps/gpsd/ddc328ff.0:system/bin/gpsd/ddc328ff.0 \
+	device/samsung/epic/prebuilt/gps/gpsd/ed62f4e3.0:system/bin/gpsd/ed62f4e3.0 \
+	device/samsung/epic/prebuilt/gps/gpsd/f0b6e66f.0:system/bin/gpsd/f0b6e66f.0 \
 	device/samsung/epic/prebuilt/gps/gpsd/glgps_samsungJupiter:system/bin/gpsd/glgps_samsungJupiter \
-	device/samsung/epic/prebuilt/gps/libgps.so:system/lib/libgps.so \	
+	device/samsung/epic/prebuilt/gps/libgps.so:system/lib/libgps.so \
 	device/samsung/epic/prebuilt/gps/libsecgps.so:system/lib/libsecgps.so \
 	device/samsung/epic/prebuilt/gps/jupiter.xml:system/jupiter.xml
 
@@ -130,8 +130,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/samsung/epic/prebuilt/sensor/libsensor_yamaha.so:system/lib/libsensor_yamaha.so \
 	device/samsung/epic/prebuilt/sensor/libsensor_yamaha_test.so:system/lib/libsensor_yamaha_test.so \
-	device/samsung/epic/prebuilt/sensor/sensorserver_yamaha:system/bin/sensorserver_yamaha \	
-	device/samsung/epic/prebuilt/sensor/sensorcalibutil_yamaha:system/bin/sensorcalibutil_yamaha \	
+	device/samsung/epic/prebuilt/sensor/sensorserver_yamaha:system/bin/sensorserver_yamaha \
+	device/samsung/epic/prebuilt/sensor/sensorcalibutil_yamaha:system/bin/sensorcalibutil_yamaha \
 	device/samsung/epic/prebuilt/sensor/sensorstatutil_yamaha:system/bin/sensorstatutil_yamaha
 
 #
