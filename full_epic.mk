@@ -108,7 +108,7 @@ PRODUCT_COPY_FILES += \
 	device/samsung/epic/prebuilt/gps/gpsd/glgps_samsungJupiter:system/bin/gpsd/glgps_samsungJupiter \
 	device/samsung/epic/prebuilt/gps/libgps.so:system/lib/libgps.so \
 	device/samsung/epic/prebuilt/gps/libsecgps.so:system/lib/libsecgps.so \
-	device/samsung/epic/prebuilt/gps/jupiter.xml:system/jupiter.xml
+	device/samsung/epic/prebuilt/gps/jupiter.xml:system/etc/jupiter.xml
 
 #
 # WIMAX FOR VICTORY!

@@ -87,4 +87,4 @@ BOARD_SDEXT_DEVICE := /dev/block/mmcblk0p2
 #BOARD_USES_BMLUTILS := true
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := true
 TARGET_PREBUILT_KERNEL := device/samsung/epic/kernel
-BOARD_GPS_LIBRARIES := libgps libsecgps
+BOARD_GPS_LIBRARIES := libgps
