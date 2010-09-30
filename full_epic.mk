@@ -75,15 +75,22 @@ PRODUCT_COPY_FILES += \
 
 
 #
-# Display (3D)
+# Display (3D & 2D)
 #
 PRODUCT_COPY_FILES += \
     device/samsung/epic/prebuilt/egl/egl.cfg:system/lib/egl/egl.cfg \
     device/samsung/epic/prebuilt/egl/libEGL_POWERVR_SGX540_120.so:system/lib/egl/libEGL_POWERVR_SGX540_120.so \
     device/samsung/epic/prebuilt/egl/libGLES_android.so:system/lib/egl/libGLES_android.so \
     device/samsung/epic/prebuilt/egl/libGLESv1_CM_POWERVR_SGX540_120.so:system/lib/egl/libGLESv1_CM_POWERVR_SGX540_120.so \
-    device/samsung/epic/prebuilt/egl/libGLESv2_POWERVR_SGX540_120.so:system/lib/egl/libGLESv2_POWERVR_SGX540_120.so
-
+    device/samsung/epic/prebuilt/egl/libGLESv2_POWERVR_SGX540_120.so:system/lib/egl/libGLESv2_POWERVR_SGX540_120.so \
+    device/samsung/epic/prebuilt/egl/libIMGegl.so:system/lib/libIMGegl.so \
+    device/samsung/epic/prebuilt/egl/libpvr2d.so:system/lib/libpvr2d.so \
+    device/samsung/epic/prebuilt/egl/libsrv_init.so:system/lib/libsrv_init.so \
+    device/samsung/epic/prebuilt/egl/libsrv_um.so:system/lib/libsrv_um.so \
+    device/samsung/epic/prebuilt/egl/libPVRScopeServices.so:system/lib/libPVRScopeServices.so \
+    device/samsung/epic/prebuilt/egl/libPVRScopeServices.so:system/lib/libPVRScopeServices.so \
+    device/samsung/epic/prebuilt/egl/libpvrANDROID_WSEGL.so:system/lib/libpvrANDROID_WSEGL.so \
+    device/samsung/epic/prebuilt/egl/pvrsrvinit:system/bin/pvrsrvinit
 #
 # Sensors, Lights etc
 #
@@ -130,6 +137,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/samsung/epic/prebuilt/sensor/libsensor_yamaha.so:system/lib/libsensor_yamaha.so \
 	device/samsung/epic/prebuilt/sensor/libsensor_yamaha_test.so:system/lib/libsensor_yamaha_test.so \
+	device/samsung/epic/prebuilt/sensor/libms3c_yamaha.so:system/lib/libms3c_yamaha.so \
 	device/samsung/epic/prebuilt/sensor/sensorserver_yamaha:system/bin/sensorserver_yamaha \
 	device/samsung/epic/prebuilt/sensor/sensorcalibutil_yamaha:system/bin/sensorcalibutil_yamaha \
 	device/samsung/epic/prebuilt/sensor/sensorstatutil_yamaha:system/bin/sensorstatutil_yamaha
