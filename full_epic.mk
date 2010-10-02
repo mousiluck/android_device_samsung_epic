@@ -242,7 +242,7 @@ PRODUCT_LOCALES := hdpi
 
 $(call inherit-product, build/target/product/full.mk)
 PRODUCT_NAME := full_epic
-PRODUCT_DEVICE := epic
+PRODUCT_DEVICE := SPH-D700
 PRODUCT_MODEL := SPH-D700
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
