@@ -97,7 +97,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/epic/prebuilt/hw/copybit.s5pc110.so:system/lib/hw/copybit.s5pc110.so \
     device/samsung/epic/prebuilt/hw/lights.default.so:system/lib/hw/lights.default.so \
-    device/samsung/epic/prebuilt/hw/sensors.SPH-D700.so:system/lib/hw/sensors.SPH-D700.so \
+##  device/samsung/epic/prebuilt/hw/sensors.SPH-D700.so:system/lib/hw/sensors.SPH-D700.so \
     device/samsung/epic/prebuilt/hw/dbus.conf:system/etc/dbus.conf \
 	device/samsung/epic/prebuilt/hw/dbus-daemon:system/bin/dbus-daemon \
 	device/samsung/epic/prebuilt/hw/libdbus.so:system/bin/libdbus.so \
@@ -137,13 +137,13 @@ PRODUCT_COPY_FILES += \
 #
 # sensor daemon and libs
 #
-PRODUCT_COPY_FILES += \
-	device/samsung/epic/prebuilt/sensor/libsensor_yamaha.so:system/lib/libsensor_yamaha.so \
-	device/samsung/epic/prebuilt/sensor/libsensor_yamaha_test.so:system/lib/libsensor_yamaha_test.so \
-	device/samsung/epic/prebuilt/sensor/libms3c_yamaha.so:system/lib/libms3c_yamaha.so \
-	device/samsung/epic/prebuilt/sensor/sensorserver_yamaha:system/bin/sensorserver_yamaha \
-	device/samsung/epic/prebuilt/sensor/sensorcalibutil_yamaha:system/bin/sensorcalibutil_yamaha \
-	device/samsung/epic/prebuilt/sensor/sensorstatutil_yamaha:system/bin/sensorstatutil_yamaha
+#PRODUCT_COPY_FILES += \
+#	device/samsung/epic/prebuilt/sensor/libsensor_yamaha.so:system/lib/libsensor_yamaha.so \
+#	device/samsung/epic/prebuilt/sensor/libsensor_yamaha_test.so:system/lib/libsensor_yamaha_test.so \
+#	device/samsung/epic/prebuilt/sensor/libms3c_yamaha.so:system/lib/libms3c_yamaha.so \
+#	device/samsung/epic/prebuilt/sensor/sensorserver_yamaha:system/bin/sensorserver_yamaha \
+#	device/samsung/epic/prebuilt/sensor/sensorcalibutil_yamaha:system/bin/sensorcalibutil_yamaha \
+#	device/samsung/epic/prebuilt/sensor/sensorstatutil_yamaha:system/bin/sensorstatutil_yamaha
 
 #
 # Keys
@@ -245,7 +245,7 @@ PRODUCT_LOCALES := hdpi
 
 $(call inherit-product, build/target/product/full.mk)
 PRODUCT_NAME := full_epic
-PRODUCT_DEVICE := SPH-D700
+PRODUCT_DEVICE := epic
 PRODUCT_MODEL := SPH-D700
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
