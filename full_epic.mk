@@ -97,12 +97,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/epic/prebuilt/hw/copybit.s5pc110.so:system/lib/hw/copybit.s5pc110.so \
     device/samsung/epic/prebuilt/hw/lights.default.so:system/lib/hw/lights.default.so \
-##  device/samsung/epic/prebuilt/hw/sensors.SPH-D700.so:system/lib/hw/sensors.SPH-D700.so \
     device/samsung/epic/prebuilt/hw/dbus.conf:system/etc/dbus.conf \
 	device/samsung/epic/prebuilt/hw/dbus-daemon:system/bin/dbus-daemon \
 	device/samsung/epic/prebuilt/hw/libdbus.so:system/bin/libdbus.so \
 	device/samsung/epic/prebuilt/hw/gralloc.s5pc110.so:system/lib/hw/gralloc.s5pc110.so
-
+##  device/samsung/epic/prebuilt/hw/sensors.SPH-D700.so:system/lib/hw/sensors.SPH-D700.so \
 #
 # gps daemon, libs
 #
