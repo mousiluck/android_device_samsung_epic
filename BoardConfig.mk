@@ -39,14 +39,14 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 
 
 BOARD_USES_ALSA_AUDIO := true
+
 #bluetooth!
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
 WPA_SUPPLICANT_VERSION := VER_0_6_X
 BOARD_WLAN_DEVICE := bcm4329
-
 WIFI_DRIVER_MODULE_PATH := "/lib/modules/dhd.ko"
-WIFI_DRIVER_FW_STA_PATH := "/system/etc/firmware/fw_bcm4329.bin"
-WIFI_DRIVER_FW_AP_PATH := "/system/etc/firmware/fw_bcm4329_apsta.bin"
+MFGDRV_MODULE_ARG := "firmware_path=/system/etc/wifi/bcm4329_mfg.bin nvram_path=/system/etc/wifi/nvram_mfg.txt"
+DRV_AP_MODULE_ARG := "firmware_path=/system/etc/wifi/bcm4329_aps.bin nvram_path=/system/etc/wifi/nvram_net.txt dhd_watchdog_ms=200 dhd_poll=1"
 WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/wifi/bcm4329_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt dhd_watchdog_ms=10 dhd_poll=1"
 WIFI_DRIVER_MODULE_NAME := "bcm4329"
 BOARD_HAVE_BLUETOOTH_BCM := true
@@ -56,6 +56,7 @@ BT_ALT_STACK := true
 BRCM_BTL_INCLUDE_A2DP := true
 BRCM_BT_USE_BTL_IF := true
 ## bluetooth support 
+
 BOARD_EGL_CFG := device/samsung/epic/prebuilt/egl/egl.cfg
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
