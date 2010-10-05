@@ -190,8 +190,9 @@ PRODUCT_COPY_FILES += \
     device/samsung/epic/prebuilt/ril/libsec-ril40.so:system/lib/libsec-ril40.so \
     device/samsung/epic/prebuilt/ril/libsecril-client.so:system/lib/libsecril-client.so \
     device/samsung/epic/prebuilt/ril/drexe:system/bin/drexe \
-    device/samsung/epic/prebuilt/ril/libsec-ril40.so:system/lib/librefence.so \
-    device/samsung/epic/prebuilt/ril/rilclient-test:system/bin/rilclient-test
+    device/samsung/epic/prebuilt/ril/libreference-rilso:system/lib/libreference-ril.so \
+    device/samsung/epic/prebuilt/ril/rilclient-test:system/bin/rilclient-test \
+	device/samsung/epic/prebuilt/ril/rild:system/bin/rild
 	
 
 #
