@@ -21,7 +21,7 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 
-USE_CAMERA_STUB := true
+#USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
 -include vendor/samsung/epic/BoardConfigVendor.mk
@@ -40,7 +40,7 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 
 BOARD_USES_ALSA_AUDIO := true
 
-#bluetooth!
+#bluetooth wifi
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
 WPA_SUPPLICANT_VERSION := VER_0_6_X
 BOARD_WLAN_DEVICE := bcm4329
@@ -48,14 +48,14 @@ WIFI_DRIVER_MODULE_PATH := "/lib/modules/dhd.ko"
 MFGDRV_MODULE_ARG := "firmware_path=/system/etc/wifi/bcm4329_mfg.bin nvram_path=/system/etc/wifi/nvram_mfg.txt"
 DRV_AP_MODULE_ARG := "firmware_path=/system/etc/wifi/bcm4329_aps.bin nvram_path=/system/etc/wifi/nvram_net.txt dhd_watchdog_ms=200 dhd_poll=1"
 WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/wifi/bcm4329_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt dhd_watchdog_ms=10 dhd_poll=1"
-WIFI_DRIVER_MODULE_NAME := "bcm4329"
+WIFI_DRIVER_MODULE_NAME := "dhd"
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_HAVE_BLUETOOTH := true
 BT_USE_BTL_IF := true
 BT_ALT_STACK := true
 BRCM_BTL_INCLUDE_A2DP := true
 BRCM_BT_USE_BTL_IF := true
-## bluetooth support 
+## bluetooth wifi support 
 
 BOARD_EGL_CFG := device/samsung/epic/prebuilt/egl/egl.cfg
 
@@ -96,5 +96,5 @@ BOARD_SDEXT_DEVICE := /dev/block/mmcblk0p2
 #BOARD_USES_BMLUTILS := true
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := true
 TARGET_PREBUILT_KERNEL := device/samsung/epic/kernel
-#BOARD_GPS_LIBRARIES := libgps libsecgps
+#BOARD_GPS_LIBRARIES := libgps libsecgps 
 BOARD_GPS_LIBRARIES := 

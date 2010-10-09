@@ -63,14 +63,14 @@ PRODUCT_COPY_FILES += \
     device/samsung/epic/prebuilt/wifi/bcm4329_aps.bin:system/etc/wifi/bcm4329_aps.bin \
     device/samsung/epic/prebuilt/wifi/bcm4329_mfg.bin:system/etc/wifi/bcm4329_mfg.bin \
     device/samsung/epic/prebuilt/wifi/bcm4329_sta.bin:system/etc/wifi/bcm4329_sta.bin 
-#  device/samsung/epic/prebuilt/wifi/libwlservice.so:system/lib/libwlservice.so \
-#    device/samsung/epic/prebuilt/wifi/nvram_net.txt:system/etc/wifi/nvram_net.txt \
-#    device/samsung/epic/prebuilt/wifi/nvram_mfg.txt:system/etc/wifi/nvram_mfg.txt \
-#  device/samsung/epic/prebuilt/wifi/wifi.conf:system/etc/wifi/wifi.conf \
- #  device/samsung/epic/prebuilt/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-#   device/samsung/epic/prebuilt/wifi/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
-   #device/samsung/epic/prebuilt/wifi/wlservice:system/bin/wlservice \
-   #device/samsung/epic/prebuilt/wifi/wpa_supplicant:system/bin/wpa_supplicant
+  device/samsung/epic/prebuilt/wifi/libwlservice.so:system/lib/libwlservice.so \
+    device/samsung/epic/prebuilt/wifi/nvram_net.txt:system/etc/wifi/nvram_net.txt \
+    device/samsung/epic/prebuilt/wifi/nvram_mfg.txt:system/etc/wifi/nvram_mfg.txt \
+  device/samsung/epic/prebuilt/wifi/wifi.conf:system/etc/wifi/wifi.conf \
+   device/samsung/epic/prebuilt/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+   device/samsung/epic/prebuilt/wifi/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
+   device/samsung/epic/prebuilt/wifi/wlservice:system/bin/wlservice \
+   device/samsung/epic/prebuilt/wifi/wpa_supplicant:system/bin/wpa_supplicant
 
 
 
