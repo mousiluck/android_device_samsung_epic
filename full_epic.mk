@@ -62,7 +62,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/epic/prebuilt/wifi/bcm4329_aps.bin:system/etc/wifi/bcm4329_aps.bin \
     device/samsung/epic/prebuilt/wifi/bcm4329_mfg.bin:system/etc/wifi/bcm4329_mfg.bin \
-    device/samsung/epic/prebuilt/wifi/bcm4329_sta.bin:system/etc/wifi/bcm4329_sta.bin 
+    device/samsung/epic/prebuilt/wifi/bcm4329_sta.bin:system/etc/wifi/bcm4329_sta.bin \
   device/samsung/epic/prebuilt/wifi/libwlservice.so:system/lib/libwlservice.so \
     device/samsung/epic/prebuilt/wifi/nvram_net.txt:system/etc/wifi/nvram_net.txt \
     device/samsung/epic/prebuilt/wifi/nvram_mfg.txt:system/etc/wifi/nvram_mfg.txt \
