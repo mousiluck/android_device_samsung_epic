@@ -66,7 +66,7 @@ PRODUCT_COPY_FILES += \
   device/samsung/epic/prebuilt/wifi/libwlservice.so:system/lib/libwlservice.so \
     device/samsung/epic/prebuilt/wifi/nvram_net.txt:system/etc/wifi/nvram_net.txt \
     device/samsung/epic/prebuilt/wifi/nvram_mfg.txt:system/etc/wifi/nvram_mfg.txt \
-  device/samsung/epic/prebuilt/wifi/wifi.conf:system/etc/wifi/wifi.conf \
+  device/samsung/epic/prebuilt/wifi/wifi.conf:system/etc/wifi.conf \
    device/samsung/epic/prebuilt/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
    device/samsung/epic/prebuilt/wifi/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
    device/samsung/epic/prebuilt/wifi/wlservice:system/bin/wlservice \
