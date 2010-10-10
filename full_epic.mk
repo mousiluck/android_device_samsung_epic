@@ -88,7 +88,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/epic/prebuilt/egl/libsrv_init.so:system/lib/libsrv_init.so \
     device/samsung/epic/prebuilt/egl/libsrv_um.so:system/lib/libsrv_um.so \
     device/samsung/epic/prebuilt/egl/libPVRScopeServices.so:system/lib/libPVRScopeServices.so \
-    device/samsung/epic/prebuilt/egl/libPVRScopeServices.so:system/lib/libPVRScopeServices.so \
+    device/samsung/epic/prebuilt/egl/libglslcompiler.so:system/lib/libglslcompiler.so \
     device/samsung/epic/prebuilt/egl/libpvrANDROID_WSEGL.so:system/lib/libpvrANDROID_WSEGL.so \
     device/samsung/epic/prebuilt/egl/pvrsrvinit:system/bin/pvrsrvinit
 #
