@@ -41,8 +41,8 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 BOARD_USES_ALSA_AUDIO := true
 
 #bluetooth wifi
-#BOARD_WPA_SUPPLICANT_DRIVER := WEXT
-#WPA_SUPPLICANT_VERSION := VER_0_6_X
+BOARD_WPA_SUPPLICANT_DRIVER := WEXT
+WPA_SUPPLICANT_VERSION := VER_0_6_X
 #BOARD_WLAN_DEVICE := bcm4329
 WIFI_DRIVER_MODULE_PATH := "/lib/modules/dhd.ko"
 #MFGDRV_MODULE_ARG := "firmware_path=/system/etc/wifi/bcm4329_mfg.bin nvram_path=/system/etc/wifi/nvram_mfg.txt"
