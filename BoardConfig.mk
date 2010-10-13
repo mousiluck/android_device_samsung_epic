@@ -24,23 +24,26 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/samsung/epic/BoardConfigVendor.mk
+-include vendor/samsung/SGH-T959/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
 #TARGET_NO_RECOVERY := true
 #TARGET_NO_KERNEL := true
 
+TARGET_BOARD := SPH-D700
 TARGET_BOARD_PLATFORM := s5pc110
 TARGET_BOARD_PLATFORM_GPU := POWERVR_SGX540_120
 
+# ARMv7-A Cortex-A8 architecture
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
 
-
+# Sound related defines
 BOARD_USES_ALSA_AUDIO := true
+BUILD_WITH_ALSA_UTILS := true
 
-#bluetooth wifi
+# Bluetooth & wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
 WPA_SUPPLICANT_VERSION := VER_0_6_X
 #BOARD_WLAN_DEVICE := bcm4329
@@ -49,16 +52,14 @@ WIFI_DRIVER_MODULE_PATH := "/lib/modules/dhd.ko"
 #DRV_AP_MODULE_ARG := "firmware_path=/system/etc/wifi/bcm4329_aps.bin nvram_path=/system/etc/wifi/nvram_net.txt dhd_watchdog_ms=200 dhd_poll=1"
 WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/wifi/bcm4329_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt dhd_watchdog_ms=10 dhd_poll=1"
 WIFI_DRIVER_MODULE_NAME := "dhd"
-
 #BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_HAVE_BLUETOOTH := true
 BT_USE_BTL_IF := true
 BT_ALT_STACK := true
 BRCM_BTL_INCLUDE_A2DP := true
 BRCM_BT_USE_BTL_IF := true
-## bluetooth wifi support 
 
-BOARD_EGL_CFG := device/samsung/epic/prebuilt/egl/egl.cfg
+BOARD_EGL_CFG := device/samsung/SPH-D700/prebuilt/egl.cfg
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x02e00000
@@ -75,16 +76,10 @@ BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_USES_FFORMAT := true
 BOARD_RECOVERY_IGNORE_BOOTABLES := true
 
-
 BOARD_BOOT_DEVICE := /dev/block/bml7
 BOARD_DATA_DEVICE := /dev/block/stl10
 BOARD_DATA_FILESYSTEM := auto
 BOARD_DATA_FILESYSTEM_OPTIONS := llw,check=no,nosuid,nodev
-## doesn't have dbdata partition
-##BOARD_HAS_DATADATA := true
-##BOARD_DATADATA_DEVICE := /dev/block/stl10
-##BOARD_DATADATA_FILESYSTEM := auto
-##BOARD_DATADATA_FILESYSTEM_OPTIONS := llw,check=no,nosuid,nodev
 BOARD_SYSTEM_DEVICE := /dev/block/stl9
 BOARD_SYSTEM_FILESYSTEM := auto
 BOARD_SYSTEM_FILESYSTEM_OPTIONS := llw,check=no
@@ -96,6 +91,5 @@ BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk0p1
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk0p2
 #BOARD_USES_BMLUTILS := true
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := true
-TARGET_PREBUILT_KERNEL := device/samsung/epic/kernel
-#BOARD_GPS_LIBRARIES := libgps libsecgps 
-BOARD_GPS_LIBRARIES := 
+
+TARGET_PREBUILT_KERNEL := device/samsung/SPH-D700/kernel
