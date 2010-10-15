@@ -75,6 +75,7 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml
 
 # Keylayout / Keychars
+PRODUCT_COPY_FILES += \
      device/samsung/SPH-D700/prebuilt/keylayout/s3c-keypad.kl:system/usr/keylayout/s3c-keypad.kl \
      device/samsung/SPH-D700/prebuilt/keylayout/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
      device/samsung/SPH-D700/prebuilt/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
