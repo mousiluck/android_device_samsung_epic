@@ -42,7 +42,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #sprint cdma stuff
 PRODUCT_PROPERTY_OVERRIDES += \
 	  ro.com.google.clientidbase=android-sprint-us \
-	  ro.cdma.home.operator.numeric=310120 \ 
+	  ro.cdma.home.operator.numeric=310120 \
 	  ro.cdma.home.operator.alpha=Sprint 
 
 
