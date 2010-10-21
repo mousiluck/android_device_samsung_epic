@@ -29,7 +29,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/SPH-D700/init.smdkc110.rc:root/init.smdkc110.rc
 
 ## (2) Also get non-open-source GSM-specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/SPH-D700/SPH-D70-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/SPH-D700/SPH-D700-vendor.mk)
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
