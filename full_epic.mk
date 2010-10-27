@@ -38,7 +38,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libargs=-d /dev/ttyS0 \
     wifi.interface=eth0 \
     wifi.supplicant_scan_interval=15
-
+PRODUCT_PROPERTY_OVERRIDES := rild.libargs=-d /dev/ttyS0
 #sprint cdma stuff
 PRODUCT_PROPERTY_OVERRIDES += \
 	  ro.com.google.clientidbase=android-sprint-us \
