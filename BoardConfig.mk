@@ -62,11 +62,11 @@ BT_ALT_STACK := true
 BRCM_BTL_INCLUDE_A2DP := true
 BRCM_BT_USE_BTL_IF := true
 
-BOARD_EGL_CFG := device/samsung/SPH-D700/prebuilt/egl.cfg
+BOARD_EGL_CFG := device/samsung/epic/prebuilt/egl.cfg
 
 # Device related defines
 
-TARGET_PREBUILT_KERNEL := device/samsung/SPH-D700/kernel
+TARGET_PREBUILT_KERNEL := device/samsung/epic/kernel
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x02e00000
 

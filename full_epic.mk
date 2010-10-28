@@ -26,7 +26,7 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 PRODUCT_COPY_FILES += \
-    device/samsung/SPH-D700/init.smdkc110.rc:root/init.smdkc110.rc
+    device/samsung/epic/init.smdkc110.rc:root/init.smdkc110.rc
 
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/samsung/SPH-D700/SPH-D700-vendor.mk)
@@ -55,13 +55,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Epic uses high-density artwork where available
 PRODUCT_LOCALES := hdpi
 
-DEVICE_PACKAGE_OVERLAYS += device/samsung/SPH-D700/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/epic/overlay
 
 # media profiles and capabilities spec
-$(call inherit-product, device/samsung/SPH-D700/media_a1026.mk)
+$(call inherit-product, device/samsung/epic/media_a1026.mk)
 # media config xml file
 PRODUCT_COPY_FILES += \
-    device/samsung/SPH-D700/media_profiles.xml:system/etc/media_profiles.xml
+    device/samsung/epic/media_profiles.xml:system/etc/media_profiles.xml
 
 # asound.conf
 PRODUCT_COPY_FILES += \
@@ -80,30 +80,29 @@ PRODUCT_COPY_FILES += \
 
 # Keylayout / Keychars
 PRODUCT_COPY_FILES += \
-     device/samsung/SPH-D700/prebuilt/keylayout/s3c-keypad.kl:system/usr/keylayout/s3c-keypad.kl \
-     device/samsung/SPH-D700/prebuilt/keylayout/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
-     device/samsung/SPH-D700/prebuilt/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
-     device/samsung/SPH-D700/prebuilt/keylayout/melfas-touchkey.kl:system/usr/keylayout/melfas-touchkey.kl \
-     device/samsung/SPH-D700/prebuilt/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-     device/samsung/SPH-D700/prebuilt/keychars/s3c-keypad.kcm.bin:system/usr/keychars/s3c-keypad.kcm.bin \
-     device/samsung/SPH-D700/prebuilt/keychars/sec_jack.kcm.bin:system/usr/keychars/sec_jack.kcm.bin \
-     device/samsung/SPH-D700/prebuilt/keychars/melfas-touchkey.kcm.bin:system/usr/keychars/melfas-touchkey.kcm.bin \
-     device/samsung/SPH-D700/prebuilt/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
-     device/samsung/SPH-D700/prebuilt/keychars/s3c-keypad-rev0050.kcm.bin:system/usr/keychars/s3c-keypad-rev0050.kcm.bin \
-     device/samsung/SPH-D700/prebuilt/keychars/s3c-keypad-rev0040.kcm.bin:system/usr/keychars/s3c-keypad-rev0040.kcm.bin \
-     device/samsung/SPH-D700/prebuilt/keychars/s3c-keypad-rev0030.kcm.bin:system/usr/keychars/s3c-keypad-rev0030.kcm.bin \
-	   device/samsung/SPH-D700/prebuilt/keychars/s3c-keypad-rev0000.kcm.bin:system/usr/keychars/s3c-keypad-rev0000.kcm.bin \
-	   device/samsung/SPH-D700/prebuilt/keychars/melfas_ts_input.kcm.bin:system/usr/keychars/melfas_ts_input.kcm.bin \
-     device/samsung/SPH-D700/prebuilt/keychars/optjoy_device.kcm.bin:system/usr/keychars/optjoy_device.kcm.bin \
-     device/samsung/SPH-D700/prebuilt/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin  
+     device/samsung/epic/prebuilt/keylayout/s3c-keypad.kl:system/usr/keylayout/s3c-keypad.kl \
+     device/samsung/epic/prebuilt/keylayout/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
+     device/samsung/epic/prebuilt/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+     device/samsung/epic/prebuilt/keylayout/melfas-touchkey.kl:system/usr/keylayout/melfas-touchkey.kl \
+     device/samsung/epic/prebuilt/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
+     device/samsung/epic/prebuilt/keychars/s3c-keypad.kcm.bin:system/usr/keychars/s3c-keypad.kcm.bin \
+     device/samsung/epic/prebuilt/keychars/sec_jack.kcm.bin:system/usr/keychars/sec_jack.kcm.bin \
+     device/samsung/epic/prebuilt/keychars/melfas-touchkey.kcm.bin:system/usr/keychars/melfas-touchkey.kcm.bin \
+     device/samsung/epic/prebuilt/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
+     device/samsung/epic/prebuilt/keychars/s3c-keypad-rev0050.kcm.bin:system/usr/keychars/s3c-keypad-rev0050.kcm.bin \
+     device/samsung/epic/prebuilt/keychars/s3c-keypad-rev0040.kcm.bin:system/usr/keychars/s3c-keypad-rev0040.kcm.bin \
+     device/samsung/epic/prebuilt/keychars/s3c-keypad-rev0030.kcm.bin:system/usr/keychars/s3c-keypad-rev0030.kcm.bin \
+	   device/samsung/epic/prebuilt/keychars/s3c-keypad-rev0000.kcm.bin:system/usr/keychars/s3c-keypad-rev0000.kcm.bin \
+	   device/samsung/epic/prebuilt/keychars/melfas_ts_input.kcm.bin:system/usr/keychars/melfas_ts_input.kcm.bin \
+     device/samsung/epic/prebuilt/keychars/optjoy_device.kcm.bin:system/usr/keychars/optjoy_device.kcm.bin \
+     device/samsung/epic/prebuilt/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin  
 
 PRODUCT_COPY_FILES += \
-    device/samsung/SPH-D700/prebuilt/vold.conf:system/etc/vold.conf \
-	    device/samsung/SPH-D700/prebuilt/egl.cfg:system/lib/egl/egl.cfg
+    device/samsung/epic/prebuilt/vold.conf:system/etc/vold.conf
 
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/samsung/SPH-D700/kernel
+LOCAL_KERNEL := device/samsung/epic/kernel
 else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -116,8 +115,8 @@ $(call inherit-product, build/target/product/full.mk)
 
 
 PRODUCT_NAME := full_epic
-PRODUCT_DEVICE := SPH-D700
-PRODUCT_MODEL := Epic
-PRODUCT_BRAND := samsung
+PRODUCT_DEVICE := epic
+PRODUCT_MODEL := SAMSUNG-SPH-D700
+PRODUCT_BRAND := Samsung
 PRODUCT_MANUFACTURER := Samsung
 TARGET_IS_GALAXYS := true
