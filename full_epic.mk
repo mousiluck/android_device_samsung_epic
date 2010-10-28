@@ -98,7 +98,7 @@ PRODUCT_COPY_FILES += \
      device/samsung/SPH-D700/prebuilt/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin  
 
 PRODUCT_COPY_FILES += \
-    device/samsung/SPH-D700/prebuilt/vold.conf:system/etc/vold.conf /
+    device/samsung/SPH-D700/prebuilt/vold.conf:system/etc/vold.conf \
 	    device/samsung/SPH-D700/prebuilt/egl.cfg:system/lib/egl/egl.cfg
 
 # Kernel
