@@ -48,11 +48,6 @@ lib/libwibropath.so
 lib/libwlservice.so
 lib/libwldhcp.so
 lib/libwifitest.so
-lib/libwlp2p.so
-lib/libwlp2pclient.so
-lib/libwlp2penablejni.so
-lib/libwlwps.so
-lib/libwlwpscli.so
 lib/libwpa_client.so
 bin/wpa_supplicant
 bin/wpa_cli
@@ -93,9 +88,9 @@ lib/libpvrANDROID_WSEGL.so
 bin/pvrsrvinit
 
 lib/hw/copybit.s5pc110.so
-lib/hw/lights.default.so
+lib/hw/lights.s5pc110.so
 lib/hw/gralloc.s5pc110.so
-lib/hw/sensors.__DEVICE__.so 
+lib/hw/sensors.default.so 
 	
 
 lib/libarccamera.so
@@ -271,11 +266,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libwlservice.so:system/lib/libwlservice.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libwldhcp.so:system/lib/libwldhcp.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libwifitest.so:system/lib/libwifitest.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libwlp2p.so:system/lib/libwlp2p.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libwlp2pclient.so:system/lib/libwlp2pclient.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libwlp2penablejni.so:system/lib/libwlp2penablejni.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libwlwps.so:system/lib/libwlwps.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libwlwpscli.so:system/lib/libwlwpscli.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libwpa_client.so:system/lib/libwpa_client.so \\
     vendor/samsung/__DEVICE__/proprietary/bin/wpa_supplicant:system/bin/wpa_supplicant \\
 	vendor/samsung/__DEVICE__/proprietary/bin/wpa_cli:system/bin/wpa_cli \\
@@ -331,9 +321,9 @@ PRODUCT_COPY_FILES += \\
 #
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/hw/copybit.s5pc110.so:system/lib/hw/copybit.s5pc110.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/hw/lights.default.so:system/lib/hw/lights.default.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/hw/lights.s5pc110.so:system/lib/hw/lights.s5pc110.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/hw/gralloc.s5pc110.so:system/lib/hw/gralloc.s5pc110.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/hw/sensors.__DEVICE__.so:system/lib/hw/sensors.__DEVICE__.so 
+    vendor/samsung/__DEVICE__/proprietary/lib/hw/sensors.default.so:system/lib/hw/sensors.default.so 
 	
 #
 # Camera
