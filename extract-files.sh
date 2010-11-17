@@ -355,7 +355,7 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecril-client.so:system/lib/libsecril-client.so \\
     vendor/samsung/__DEVICE__/proprietary/bin/drexe:system/bin/drexe \\
     vendor/samsung/__DEVICE__/proprietary/bin/rild:system/bin/rild \\
-    vendor/samsung/__DEVICE__/proprietary/bin/rilclient-test:system/bin/rilclient-test
+    vendor/samsung/__DEVICE__/proprietary/bin/rilclient-test:system/bin/rilclient-test \\
 	vendor/samsung/__DEVICE__/proprietary/lib/libreference-ril.so:system/lib/libreference-ril.so
 
 
