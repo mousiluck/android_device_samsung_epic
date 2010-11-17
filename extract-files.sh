@@ -46,7 +46,6 @@ etc/wifi/wifi.conf
 etc/wifi/wpa_supplicant.conf
 lib/libwibropath.so
 lib/libwlservice.so
-lib/libwldhcp.so
 lib/libwifitest.so
 lib/libwpa_client.so
 bin/wpa_supplicant
@@ -264,7 +263,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \\
     vendor/samsung/__DEVICE__/proprietary/lib/libwibropath.so:system/lib/libwibropath.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libwlservice.so:system/lib/libwlservice.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libwldhcp.so:system/lib/libwldhcp.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libwifitest.so:system/lib/libwifitest.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libwpa_client.so:system/lib/libwpa_client.so \\
     vendor/samsung/__DEVICE__/proprietary/bin/wpa_supplicant:system/bin/wpa_supplicant \\
