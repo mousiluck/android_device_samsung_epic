@@ -343,7 +343,7 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libcamerafirmwarejni.so:system/lib/libcamerafirmwarejni.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:system/lib/libcamera.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libseccameraadaptor.so:system/lib/libseccameraadaptor.so \\
-	vendor/samsung/GT-I9000/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so \\ 
+	vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so \\ 
     vendor/samsung/__DEVICE__/proprietary/lib/libseccamera.so:system/lib/libseccamera.so
 
 #
@@ -356,7 +356,7 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/bin/drexe:system/bin/drexe \\
     vendor/samsung/__DEVICE__/proprietary/bin/rild:system/bin/rild \\
     vendor/samsung/__DEVICE__/proprietary/bin/rilclient-test:system/bin/rilclient-test
-	vendor/samsung/GT-I9000/proprietary/lib/libreference-ril.so:system/lib/libreference-ril.so
+	vendor/samsung/__DEVICE__/proprietary/lib/libreference-ril.so:system/lib/libreference-ril.so
 
 
 
@@ -460,7 +460,7 @@ PRODUCT_COPY_FILES += \\
 #
 PRODUCT_COPY_FILES += \\
 	vendor/samsung/__DEVICE__/proprietary/bin/immvbsd:system/bin/immvbsd \\
-	vendor/samsung/GT-I9000/proprietary/bin/logwrapper:system/bin/logwrapper \\
+	vendor/samsung/__DEVICE__/proprietary/bin/logwrapper:system/bin/logwrapper \\
 	vendor/samsung/__DEVICE__/proprietary/bin/immvibed:system/bin/immvibed \\
 	vendor/samsung/__DEVICE__/proprietary/lib/libhardware_legacy.so:system/lib/libhardware_legacy.so \\
 	vendor/samsung/__DEVICE__/proprietary/bin/killmediaserver:system/bin/killmediaserver \\
