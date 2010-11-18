@@ -26,6 +26,7 @@ lib/egl
 lib/hw
 media
 firmware
+cameradata
 "
 
 for DIR in $DIRS; do
@@ -98,6 +99,8 @@ lib/libcamera.so
 lib/libseccameraadaptor.so
 lib/libs3cjpeg.so 
 lib/libseccamera.so
+cameradata/datapattern_420sp.yuv
+cameradata/datapattern_front_420sp.yuv
 
 lib/libril.so
 lib/libsec-ril40.so
@@ -321,7 +324,9 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:system/lib/libcamera.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libseccameraadaptor.so:system/lib/libseccameraadaptor.so \\
 	vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libseccamera.so:system/lib/libseccamera.so
+    vendor/samsung/__DEVICE__/proprietary/lib/libseccamera.so:system/lib/libseccamera.so \\
+	vendor/samsung/__DEVICE__/proprietary/cameradata/datapattern_420sp.yuv:system/cameradata/datapattern_420sp.yuv \\
+    vendor/samsung/__DEVICE__/proprietary/cameradata/datapattern_front_420sp.yuv:system/cameradata/datapattern_front_420sp.yuv
 
 #
 # RIL
