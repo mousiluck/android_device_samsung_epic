@@ -65,7 +65,7 @@ PRODUCT_COPY_FILES += \
 
 # asound.conf
 PRODUCT_COPY_FILES += \
-    device/samsung/SGH-T959/prebuilt/asound.conf:system/etc/asound.conf
+    device/samsung/epic/prebuilt/asound.conf:system/etc/asound.conf
 
 # Install the features available on this device.
 PRODUCT_COPY_FILES += \

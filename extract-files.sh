@@ -52,7 +52,7 @@ bin/wpa_supplicant
 bin/wpa_cli
 bin/wlp2pservice
 bin/btld
-bin/BCM4329B1_002.002.023.0417.0435.hcd
+bin/BCM4329B1_002.002.023.0417.0430.hcd
 bin/mfgloader
 bin/dbus-daemon
 bin/hciattach
@@ -109,16 +109,6 @@ lib/libreference-ril.so
 
 
 
-bin/gpsd/66ca3eb6.0
-bin/gpsd/7651b327.0
-bin/gpsd/803ca020.0
-bin/gpsd/8c7fccef.0
-bin/gpsd/c9dbfc2e.0
-bin/gpsd/ddc328ff.0
-bin/gpsd/ed62f4e3.0
-bin/gpsd/f0b6e66f.0
-bin/gpsd/glgps_samsungJupiter
-etc/jupiter.xml
 lib/libgps.so
 lib/libsecgps.so
 
@@ -269,11 +259,10 @@ PRODUCT_COPY_FILES += \\
 	vendor/samsung/__DEVICE__/proprietary/bin/wpa_cli:system/bin/wpa_cli \\
 	vendor/samsung/__DEVICE__/proprietary/bin/wlp2pservice:system/bin/wlp2pservice \\
 	vendor/samsung/__DEVICE__/proprietary/bin/btld:system/bin/btld \\
-	vendor/samsung/__DEVICE__/proprietary/bin/BCM4329B1_002.002.023.0417.0435.hcd:system/bin/BCM4329B1_002.002.023.0417.0435.hcd \\
+	vendor/samsung/__DEVICE__/proprietary/bin/BCM4329B1_002.002.023.0417.0430.hcd:system/bin/BCM4329B1_002.002.023.0417.0430.hcd \\
 	vendor/samsung/__DEVICE__/proprietary/bin/mfgloader:system/bin/mfgloader \\
 	vendor/samsung/__DEVICE__/proprietary/bin/dbus-daemon:system/bin/dbus-daemon \\
 	vendor/samsung/__DEVICE__/proprietary/bin/hciattach:system/bin/hciattach \\
-	vendor/samsung/__DEVICE__/proprietary/bin/npsmobex:system/bin/npsmobex \\
     vendor/samsung/__DEVICE__/proprietary/bin/wlservice:system/bin/wlservice
 
 #
@@ -352,16 +341,6 @@ PRODUCT_COPY_FILES += \\
 # GPS
 #
 PRODUCT_COPY_FILES += \\
-    vendor/samsung/__DEVICE__/proprietary/bin/gpsd/66ca3eb6.0:system/bin/gpsd/66ca3eb6.0 \\
-    vendor/samsung/__DEVICE__/proprietary/bin/gpsd/7651b327.0:system/bin/gpsd/7651b327.0 \\
-    vendor/samsung/__DEVICE__/proprietary/bin/gpsd/803ca020.0:system/bin/gpsd/803ca020.0 \\
-    vendor/samsung/__DEVICE__/proprietary/bin/gpsd/8c7fccef.0:system/bin/gpsd/8c7fccef.0 \\
-    vendor/samsung/__DEVICE__/proprietary/bin/gpsd/c9dbfc2e.0:system/bin/gpsd/c9dbfc2e.0 \\
-    vendor/samsung/__DEVICE__/proprietary/bin/gpsd/ddc328ff.0:system/bin/gpsd/ddc328ff.0 \\
-    vendor/samsung/__DEVICE__/proprietary/bin/gpsd/ed62f4e3.0:system/bin/gpsd/ed62f4e3.0 \\
-    vendor/samsung/__DEVICE__/proprietary/bin/gpsd/f0b6e66f.0:system/bin/gpsd/f0b6e66f.0 \\
-    vendor/samsung/__DEVICE__/proprietary/bin/gpsd/glgps_samsungJupiter:system/bin/gpsd/glgps_samsungJupiter \\
-    vendor/samsung/__DEVICE__/proprietary/etc/jupiter.xml:system/etc/jupiter.xml \\
     vendor/samsung/__DEVICE__/proprietary/lib/libgps.so:system/lib/libgps.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsecgps.so:system/lib/libsecgps.so
 
