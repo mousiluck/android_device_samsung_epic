@@ -254,13 +254,8 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/bcm4329_sta.bin:system/etc/wifi/bcm4329_sta.bin \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/wifi.conf:system/etc/wifi/wifi.conf \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libwibropath.so:system/lib/libwibropath.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libwlservice.so:system/lib/libwlservice.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libwifitest.so:system/lib/libwifitest.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libwpa_client.so:system/lib/libwpa_client.so \\
     vendor/samsung/__DEVICE__/proprietary/bin/wpa_supplicant:system/bin/wpa_supplicant \\
-	vendor/samsung/__DEVICE__/proprietary/bin/wpa_cli:system/bin/wpa_cli \\
-	vendor/samsung/__DEVICE__/proprietary/bin/wlp2pservice:system/bin/wlp2pservice \\
 	vendor/samsung/__DEVICE__/proprietary/bin/btld:system/bin/btld \\
 	vendor/samsung/__DEVICE__/proprietary/bin/BCM4329B1_002.002.023.0417.0430.hcd:system/bin/BCM4329B1_002.002.023.0417.0430.hcd \\
 	vendor/samsung/__DEVICE__/proprietary/bin/mfgloader:system/bin/mfgloader \\
