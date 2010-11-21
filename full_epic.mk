@@ -51,7 +51,12 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.startheapsize=8m \
     dalvik.vm.heapsize=48m
-
+	
+#	For mobiledatainterfaces
+PRODUCT_PROPERTY_OVERRIDES += \
+    mobiledata.interfaces=eth0,ppp0
+	
+	
 # Epic uses high-density artwork where available
 PRODUCT_LOCALES := hdpi
 
@@ -59,6 +64,7 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/epic/overlay
 
 # media profiles and capabilities spec
 $(call inherit-product, device/samsung/epic/media_a1026.mk)
+
 # media config xml file
 PRODUCT_COPY_FILES += \
     device/samsung/epic/media_profiles.xml:system/etc/media_profiles.xml

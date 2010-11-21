@@ -24,7 +24,6 @@
 #USE_CAMERA_STUB := true
 BOARD_OVERLAY_FORMAT_YCbRc_420_SP := true
 BUILD_PV_VIDEO_ENCODERS := 1
-BOARD_USES_ECLAIR_LIBCAMERA := true
 
 # inherit from the proprietary version
 -include vendor/samsung/SPH-D700/BoardConfigVendor.mk
@@ -47,6 +46,7 @@ TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a8
 # Sound related defines
 BOARD_USES_ALSA_AUDIO := true
 BUILD_WITH_ALSA_UTILS := true
+ALSA_DEFAULT_SAMPLE_RATE := 44100
 
 # WiFi related defines
 
