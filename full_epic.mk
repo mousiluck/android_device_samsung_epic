@@ -37,14 +37,27 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libsec-ril40.so \
   	rild.libargs=-d /dev/ttyS0 \
     wifi.interface=eth0 \
-    wifi.supplicant_scan_interval=15
+    wifi.supplicant_scan_interval=15 \
 
-#sprint cdma stuff
+	#sprint cdma stuff
 PRODUCT_PROPERTY_OVERRIDES += \
-	  ro.com.google.clientidbase=android-sprint-us \
-	  ro.cdma.home.operator.numeric=310120 \
-	  ro.cdma.home.operator.alpha=Sprint 
-
+	ro.com.google.clientidbase=android-sprint-us \
+	ro.cdma.home.operator.numeric=310120 \
+	ro.cdma.home.operator.alpha=Sprint \
+  	net.cdma.pppd.authtype=require-pap \
+	net.cdma.pppd.user=user SprintNextel \
+	net.cdma.datalinkinterface=/dev/ttyCDMA0 \
+	net.interfaces.defaultroute=cdma \
+	net.cdma.ppp.interface=ppp0 \
+	net.connectivity.type=CDMA1 \
+	gsm.operator.alpha=Sprint \
+	gsm.operator.numeric=310120 \
+	gsm.operator.iso-country=us \
+	gsm.operator.isroaming=false \
+	gsm.current.phone-type=2 \
+	ro.csc.sales_code=SPR \
+	ril.sales_code=SPR \
+	ro.carrier=Sprint 
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
