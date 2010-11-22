@@ -35,7 +35,7 @@ $(call inherit-product-if-exists, vendor/samsung/SPH-D700/SPH-D700-vendor.mk)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
     rild.libpath=/system/lib/libsec-ril40.so \
-  	rild.libargs=-d /dev/ttyS0 \
+  	rild.libargs=-d[SPACE]/dev/ttyS0 \
     wifi.interface=eth0 \
     wifi.supplicant_scan_interval=15
 
