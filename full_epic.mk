@@ -114,7 +114,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     device/samsung/epic/prebuilt/vold.conf:system/etc/vold.conf \
-    device/samsung/epic/prebuilt/vold.stab:system/etc/vold.fstab
+    device/samsung/epic/prebuilt/vold.fstab:system/etc/vold.fstab
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/samsung/epic/kernel
