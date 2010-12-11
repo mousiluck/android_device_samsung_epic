@@ -32,10 +32,6 @@ for DIR in $DIRS; do
 done
 
 FILES="
-
-
-
-
 etc/wifi/nvram_net.txt
 etc/wifi/nvram_mfg.txt
 etc/wifi/bcm4329_aps.bin
@@ -67,8 +63,6 @@ firmware/CE147F00.bin
 firmware/CE147F01.bin
 firmware/CE147F02.bin
 firmware/CE147F03.bin
-
-
 	
 lib/egl/libEGL_POWERVR_SGX540_120.so
 lib/egl/libGLES_android.so
@@ -87,7 +81,6 @@ lib/hw/copybit.s5pc110.so
 lib/hw/lights.s5pc110.so
 lib/hw/gralloc.s5pc110.so
 lib/hw/sensors.default.so 
-	
 
 lib/libarccamera.so
 lib/libcamerafirmwarejni.so
@@ -162,9 +155,7 @@ lib/libwimaxne.so
 lib/libwimaxwtm.so
 etc/wimax_boot.bin
 etc/wimaxfw.bin
-bin/dhcpcd
-etc/wimaxloader.bin 
-	
+etc/wimaxloader.bin 	
 
 bin/immvibed
 bin/logwrapper

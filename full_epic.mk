@@ -57,7 +57,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	gsm.current.phone-type=2 \
 	ro.csc.sales_code=SPR \
 	ril.sales_code=SPR \
-	ro.carrier=Sprint 
+	ro.carrier=Sprint \
+	net.dns1=8.8.8.8 \
+	net.dns2=8.8.4.4
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
