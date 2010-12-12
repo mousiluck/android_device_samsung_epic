@@ -42,6 +42,7 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_GLOBAL_CFLAGS += -mtune=cortex-a8
 TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a8
+ANDROID_ARM_LINKER := true
 
 # Sound related defines
 BOARD_USES_ALSA_AUDIO := true
@@ -50,14 +51,15 @@ ALSA_DEFAULT_SAMPLE_RATE := 44100
 
 # WiFi related defines
 
-#BOARD_WPA_SUPPLICANT_DRIVER := WEXT
-#WPA_SUPPLICANT_VERSION := VER_0_6_X
-#MFGDRV_MODULE_ARG := "firmware_path=/system/etc/wifi/bcm4329_mfg.bin nvram_path=/system/etc/wifi/nvram_mfg.txt"
-#DRV_AP_MODULE_ARG := "firmware_path=/system/etc/wifi/bcm4329_aps.bin nvram_path=/system/etc/wifi/nvram_net.txt dhd_watchdog_ms=200 dhd_poll=1"
-#BOARD_WLAN_DEVICE := bcm4329
+BOARD_WPA_SUPPLICANT_DRIVER := WEXT
+WPA_SUPPLICANT_VERSION := VER_0_6_X
+WIFI_DRIVER_FW_STA_PATH := "/system/etc/wifi/bcm4329_sta.bin"
+WIFI_DRIVER_FW_AP_PATH := "/system/etc/wifi/bcm4329_aps.bin"
+BOARD_WLAN_DEVICE := bcm4329
 WIFI_DRIVER_MODULE_PATH := "/lib/modules/dhd.ko"
 WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/wifi/bcm4329_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt dhd_watchdog_ms=10 dhd_poll=1"
 WIFI_DRIVER_MODULE_NAME := "dhd"
+CONFIG_DRIVER_WEXT := true
 
 # Bluetooth related defines
 BOARD_HAVE_BLUETOOTH_BCM := true
@@ -66,7 +68,9 @@ BT_USE_BTL_IF := true
 BT_ALT_STACK := true
 BRCM_BTL_INCLUDE_A2DP := true
 BRCM_BT_USE_BTL_IF := true
+WITH_A2DP := true
 
+# EGL
 BOARD_EGL_CFG := device/samsung/epic/prebuilt/egl.cfg
 
 # Device related defines
