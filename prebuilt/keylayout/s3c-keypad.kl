@@ -47,8 +47,6 @@ key 39    DPAD_RIGHT	WAKE_DROPPED
 key 40    ENTER	WAKE_DROPPED
 
 key 41    SHIFT_LEFT	WAKE_DROPPED
-#key 42    SMILY	WAKE_DROPPED   Not in system, stops loading of keys
-#key 43    SYMBOL	WAKE_DROPPED	''      ''
 key 44    COMMA	WAKE_DROPPED
 key 45    SPACE	WAKE_DROPPED
 
@@ -58,8 +56,8 @@ key 48    DPAD_UP	WAKE_DROPPED
 key 49    DPAD_LEFT	WAKE_DROPPED
 key 50    DPAD_DOWN	WAKE_DROPPED
 
-key 51    VOLUME_UP	WAKE_DROPPED causes volume changer dialog to crash system
-key 52    VOLUME_DOWN	WAKE_DROPPED ''     ''
+key 51    VOLUME_UP	WAKE_DROPPED
+key 52    VOLUME_DOWN	WAKE_DROPPED
 key 53    HOME	WAKE_DROPPED
 key 54    SEARCH	WAKE_DROPPED
 key 55    MENU	WAKE_DROPPED
@@ -74,3 +72,7 @@ key 158    MENU              WAKE_DROPPED
 key 139    HOME           WAKE_DROPPED
 key 102     BACK              WAKE_DROPPED
 key 107    SEARCH     	    WAKE_DROPPED
+
+
+#key 42    SMILY	WAKE_DROPPED   Not in system, stops loading of keys
+#key 43    SYMBOL	WAKE_DROPPED	''      ''
