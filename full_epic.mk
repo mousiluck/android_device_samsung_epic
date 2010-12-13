@@ -37,7 +37,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libsec-ril40.so \
   	rild.libargs=-d[SPACE]/dev/ttyS0 \
     wifi.interface=eth0 \
-    wifi.supplicant_scan_interval=15
+    wifi.supplicant_scan_interval=15 \
+	ro.wifi.channels=11
 
 	#sprint cdma stuff
 PRODUCT_PROPERTY_OVERRIDES += \
