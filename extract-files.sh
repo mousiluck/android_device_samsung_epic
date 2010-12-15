@@ -248,12 +248,12 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libwpa_client.so:system/lib/libwpa_client.so \\
     vendor/samsung/__DEVICE__/proprietary/bin/wpa_supplicant:system/bin/wpa_supplicant \\
 	vendor/samsung/__DEVICE__/proprietary/bin/wlservice:system/bin/wlservice \\
-	vendor/samsung/__DEVICE__/proprietary/bin/btld:system/bin/btld \\
 	vendor/samsung/__DEVICE__/proprietary/bin/BCM4329B1_002.002.023.0417.0430.hcd:system/bin/BCM4329B1_002.002.023.0417.0430.hcd \\
 	vendor/samsung/__DEVICE__/proprietary/bin/mfgloader:system/bin/mfgloader \\
 	vendor/samsung/__DEVICE__/proprietary/bin/dbus-daemon:system/bin/dbus-daemon \\
-	vendor/samsung/__DEVICE__/proprietary/bin/hciattach:system/bin/hciattach \\
 	vendor/samsung/__DEVICE__/proprietary/bin/wlservice:system/bin/wlservice
+#	vendor/samsung/__DEVICE__/proprietary/bin/hciattach:system/bin/hciattach \\
+#	vendor/samsung/__DEVICE__/proprietary/bin/btld:system/bin/btld \\
 
 #
 # DHCPCD
