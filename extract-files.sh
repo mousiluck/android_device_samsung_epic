@@ -359,6 +359,110 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libsvc1domxoc.so:system/lib/libsvc1domxoc.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libswmadomxoc.so:system/lib/libswmadomxoc.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libswmv7domxoc.so:system/lib/libswmv7domxoc.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libswmv8domxoc.so:system/lib/libswmv8domxoc.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libsAMRNB.so:system/lib/libsAMRNB.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libsAMRWB.so:system/lib/libsAMRWB.so
+	vendor/samsung/__DEVICE__/proprietary/lib/libswmv8domxoc.so:system/lib/libswmv8domxoc.so \\
+	vendor/samsung/__DEVICE__/proprietary/lib/libsAMRNB.so:system/lib/libsAMRNB.so \\
+	vendor/samsung/__DEVICE__/proprietary/lib/libsAMRWB.so:system/lib/libsAMRWB.so
+
+
+#
+# TV-Out
+#
+PRODUCT_COPY_FILES += \\
+    vendor/samsung/__DEVICE__/proprietary/lib/lib_tvoutengine.so:system/lib/lib_tvoutengine.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libtvout_jni.so:system/lib/libtvout_jni.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libtvoutfimc.so:system/lib/libtvoutfimc.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libtvouthdmi.so:system/lib/libtvouthdmi.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libtvoutservice.so:system/lib/libtvoutservice.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libtvout.so:system/lib/libtvout.so \\
+    vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:system/lib/libs3cjpeg.so \\
+    vendor/samsung/__DEVICE__/proprietary/bin/tvoutserver:system/bin/tvoutserver
+
+#
+# PPP
+#
+PRODUCT_COPY_FILES += \\
+    vendor/samsung/__DEVICE__/proprietary/bin/pppd_runner:system/bin/pppd_runner \\
+    vendor/samsung/__DEVICE__/proprietary/bin/pppd:system/bin/pppd \\
+    vendor/samsung/__DEVICE__/proprietary/etc/init.cdma-pppd:system/etc/init.cdma-pppd \\
+    vendor/samsung/__DEVICE__/proprietary/etc/init.gprs-pppd:system/etc/init.gprs-pppd \\
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/chap-secrets:system/etc/ppp/chap-secrets \\
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/ip-up:system/etc/ppp/ip-up \\
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/ip-down:system/etc/ppp/ip-down \\
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/ip-up-vpn:system/etc/ppp/ip-up-vpn \\
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/pap-secrets:system/etc/ppp/pap-secrets \\
+    vendor/samsung/__DEVICE__/proprietary/etc/ppp/options:system/etc/ppp/options
+
+#
+#Sensors
+#
+PRODUCT_COPY_FILES += \\
+	vendor/samsung/__DEVICE__/proprietary/lib/libsensor_yamaha.so:system/lib/libsensor_yamaha.so \\
+	vendor/samsung/__DEVICE__/proprietary/lib/libsensor_yamaha_test.so:system/lib/libsensor_yamaha_test.so \\
+	vendor/samsung/__DEVICE__/proprietary/lib/libms3c_yamaha.so:system/lib/libms3c_yamaha.so \\
+	vendor/samsung/__DEVICE__/proprietary/bin/sensorserver_yamaha:system/bin/sensorserver_yamaha \\
+	vendor/samsung/__DEVICE__/proprietary/bin/sensorcalibutil_yamaha:system/bin/sensorcalibutil_yamaha \\
+	vendor/samsung/__DEVICE__/proprietary/bin/sensorstatutil_yamaha:system/bin/sensorstatutil_yamaha
+
+#
+# WIMAX FOR VICTORY!
+#
+PRODUCT_COPY_FILES += \\
+	vendor/samsung/__DEVICE__/proprietary/lib/libSECmWiMAXcAPI.so:system/lib/libSECmWiMAXcAPI.so \\
+	vendor/samsung/__DEVICE__/proprietary/lib/libWiMAXLineTest.so:system/lib/libWiMAXLineTest.so \\
+	vendor/samsung/__DEVICE__/proprietary/lib/libWiMAXNative.so:system/lib/libWiMAXNative.so \\
+	vendor/samsung/__DEVICE__/proprietary/lib/libWiMAXNativeODB.so:system/lib/libWiMAXNativeODB.so \\
+	vendor/samsung/__DEVICE__/proprietary/lib/libwimaxne.so:system/lib/libwimaxne.so \\
+	vendor/samsung/__DEVICE__/proprietary/lib/libwimaxwtm.so:system/lib/libwimaxwtm.so \\
+	vendor/samsung/__DEVICE__/proprietary/etc/wimax_boot.bin:system/etc/wimax_boot.bin \\
+	vendor/samsung/__DEVICE__/proprietary/etc/wimaxfw.bin:system/etc/wimaxfw.bin \\
+	vendor/samsung/__DEVICE__/proprietary/bin/dhcpcd:system/bin/dhcpcd \\
+	vendor/samsung/__DEVICE__/proprietary/etc/wimaxloader.bin:system/etc/wimaxloader.bin 
+	
+#
+# test binary blobs
+#
+PRODUCT_COPY_FILES += \\
+	vendor/samsung/__DEVICE__/proprietary/bin/immvibed:system/bin/immvibed \\
+	vendor/samsung/__DEVICE__/proprietary/bin/logwrapper:system/bin/logwrapper \\
+	vendor/samsung/__DEVICE__/proprietary/bin/immvibed:system/bin/immvibed \\
+	vendor/samsung/__DEVICE__/proprietary/lib/libhardware_legacy.so:system/lib/libhardware_legacy.so \\
+	vendor/samsung/__DEVICE__/proprietary/bin/killmediaserver:system/bin/killmediaserver \\
+	vendor/samsung/__DEVICE__/proprietary/lib/libhardware.so:system/lib/libhardware.so \\
+	vendor/samsung/__DEVICE__/proprietary/bin/vold:system/bin/vold \\
+    vendor/samsung/__DEVICE__/proprietary/bin/notified_event:system/bin/notified_event \\
+	vendor/samsung/__DEVICE__/proprietary/lib/libnetutils.so:system/lib/libnetutils.so
+
+#
+# Files for battery charging screen
+#
+	
+PRODUCT_COPY_FILES += \\
+    vendor/samsung/__DEVICE__/proprietary/bin/playlpm:system/bin/playlpm \\
+    vendor/samsung/__DEVICE__/proprietary/bin/charging_mode:system/bin/charging_mode \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_5.qmg:system/media/battery_charging_5.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_10.qmg:system/media/battery_charging_10.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_15.qmg:system/media/battery_charging_15.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_20.qmg:system/media/battery_charging_20.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_25.qmg:system/media/battery_charging_25.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_30.qmg:system/media/battery_charging_30.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_35.qmg:system/media/battery_charging_35.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_40.qmg:system/media/battery_charging_40.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_45.qmg:system/media/battery_charging_45.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_50.qmg:system/media/battery_charging_50.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_55.qmg:system/media/battery_charging_55.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_60.qmg:system/media/battery_charging_60.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_65.qmg:system/media/battery_charging_65.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_70.qmg:system/media/battery_charging_70.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_75.qmg:system/media/battery_charging_75.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_80.qmg:system/media/battery_charging_80.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_85.qmg:system/media/battery_charging_85.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_90.qmg:system/media/battery_charging_90.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_95.qmg:system/media/battery_charging_95.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/battery_charging_100.qmg:system/media/battery_charging_100.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/chargingwarning.qmg:system/media/chargingwarning.qmg \\
+    vendor/samsung/__DEVICE__/proprietary/media/Disconnected.qmg:system/media/Disconnected.qmg
+
+EOF
+
+./setup-makefiles.sh
+
