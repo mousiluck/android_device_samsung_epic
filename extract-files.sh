@@ -46,11 +46,9 @@ lib/libwifitest.so
 lib/libwpa_client.so
 bin/wpa_supplicant
 bin/wlservice
-bin/btld
 bin/BCM4329B1_002.002.023.0417.0430.hcd
 bin/mfgloader
 bin/dbus-daemon
-bin/hciattach
 bin/wlservice
 
 bin/dhcpcd
