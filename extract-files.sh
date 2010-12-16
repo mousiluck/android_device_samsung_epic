@@ -22,6 +22,7 @@ DIRS="
 etc/dhcpcd
 etc/wifi
 lib/egl
+lib/bluez-plugin
 lib/hw
 media
 firmware
@@ -50,6 +51,16 @@ bin/BCM4329B1_002.002.023.0417.0430.hcd
 bin/mfgloader
 bin/dbus-daemon
 bin/wlservice
+bin/hciattach
+bin/btld
+bin/bluetoothd
+lib/libbluetooth.so
+lib/libbluetoothd.so
+lib/libbluedroid.so
+lib/libdbus.so
+lib/bluez-plugin/audio.so
+lib/bluez-plugin/input.so
+bin/sdptool
 
 bin/dhcpcd
 etc/dhcpcd/dhcpcd-hooks/01-test
@@ -251,10 +262,19 @@ PRODUCT_COPY_FILES += \\
 	vendor/samsung/__DEVICE__/proprietary/bin/wlservice:system/bin/wlservice \\
 	vendor/samsung/__DEVICE__/proprietary/bin/BCM4329B1_002.002.023.0417.0430.hcd:system/bin/BCM4329B1_002.002.023.0417.0430.hcd \\
 	vendor/samsung/__DEVICE__/proprietary/bin/mfgloader:system/bin/mfgloader \\
+	vendor/samsung/__DEVICE__/proprietary/bin/hciattach:system/bin/hciattach \\
+	vendor/samsung/__DEVICE__/proprietary/bin/btld:system/bin/btld \\
+	vendor/samsung/__DEVICE__/proprietary/bin/bluetoothd:system/bin/bluetoothd \\
+   vendor/samsung/__DEVICE__/proprietary/lib/libbluetooth.so:system/lib/libbluetooth.so \\
+   vendor/samsung/__DEVICE__/proprietary/lib/libbluetoothd.so:system/lib/libbluetoothd.so \\
+   vendor/samsung/__DEVICE__/proprietary/lib/libbluedroid.so:system/lib/libbluedroid.so \\
+   vendor/samsung/__DEVICE__/proprietary/lib/libdbus.so:system/lib/libdbus.so \\
+   vendor/samsung/__DEVICE__/proprietary/lib/bluez-plugin/audio.so:system/lib/bluez-plugin/audio.so \\
+   vendor/samsung/__DEVICE__/proprietary/lib/bluez-plugin/input.so:system/lib/bluez-plugin/input.so \\
+	vendor/samsung/__DEVICE__/proprietary/bin/sdptool:system/bin/sdptool \\
 	vendor/samsung/__DEVICE__/proprietary/bin/dbus-daemon:system/bin/dbus-daemon \\
 	vendor/samsung/__DEVICE__/proprietary/bin/wlservice:system/bin/wlservice
-#	vendor/samsung/__DEVICE__/proprietary/bin/hciattach:system/bin/hciattach \\
-#	vendor/samsung/__DEVICE__/proprietary/bin/btld:system/bin/btld \\
+
 
 #
 # DHCPCD
