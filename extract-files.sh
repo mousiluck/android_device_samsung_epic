@@ -19,10 +19,9 @@ DEVICE=SPH-D700
 mkdir -p ../../../vendor/samsung/$DEVICE/proprietary
 
 DIRS="
-etc/dhcpcd
+etc/ppp
 etc/wifi
 lib/egl
-lib/bluez-plugin
 lib/hw
 media
 firmware
@@ -41,33 +40,11 @@ etc/wifi/bcm4329_mfg.bin
 etc/wifi/bcm4329_sta.bin
 etc/wifi/wifi.conf
 etc/wifi/wpa_supplicant.conf
-lib/libwibropath.so
-lib/libwlservice.so
-lib/libwifitest.so
-lib/libwpa_client.so
-bin/wpa_supplicant
-bin/wlservice
 bin/BCM4329B1_002.002.023.0417.0430.hcd
-bin/mfgloader
-bin/dbus-daemon
-bin/wlservice
-bin/hciattach
-bin/btld
-bin/bluetoothd
-lib/libbluetooth.so
-lib/libbluetoothd.so
-lib/libbluedroid.so
-lib/libdbus.so
-lib/bluez-plugin/audio.so
-lib/bluez-plugin/input.so
-bin/sdptool
 
-bin/dhcpcd
-etc/dhcpcd/dhcpcd-hooks/01-test
-etc/dhcpcd/dhcpcd-hooks/20-dns.conf
-etc/dhcpcd/dhcpcd-hooks/95-configured
-etc/dhcpcd/dhcpcd-run-hooks
-etc/dhcpcd/dhcpcd.conf
+
+
+
 	
 firmware/CE147F00.bin
 firmware/CE147F01.bin
@@ -254,27 +231,8 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/bcm4329_sta.bin:system/etc/wifi/bcm4329_sta.bin \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/wifi.conf:system/etc/wifi/wifi.conf \\
     vendor/samsung/__DEVICE__/proprietary/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libwibropath.so:system/lib/libwibropath.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libwlservice.so:system/lib/libwlservice.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libwifitest.so:system/lib/libwifitest.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libwpa_client.so:system/lib/libwpa_client.so \\
-    vendor/samsung/__DEVICE__/proprietary/bin/wpa_supplicant:system/bin/wpa_supplicant \\
-	vendor/samsung/__DEVICE__/proprietary/bin/wlservice:system/bin/wlservice \\
 	vendor/samsung/__DEVICE__/proprietary/bin/BCM4329B1_002.002.023.0417.0430.hcd:system/bin/BCM4329B1_002.002.023.0417.0430.hcd \\
-	vendor/samsung/__DEVICE__/proprietary/bin/dbus-daemon:system/bin/dbus-daemon \\
-	vendor/samsung/__DEVICE__/proprietary/bin/wlservice:system/bin/wlservice
 
-
-#
-# DHCPCD
-#
-PRODUCT_COPY_FILES += \\
-	vendor/samsung/__DEVICE__/proprietary/bin/dhcpcd:system/bin/dhcpcd \\
-	vendor/samsung/__DEVICE__/proprietary/etc/dhcpcd/dhcpcd-hooks/01-test:system/etc/dhcpcd/dhcpcd-hooks/01-test \\
-	vendor/samsung/__DEVICE__/proprietary/etc/dhcpcd/dhcpcd-hooks/20-dns.conf:system/etc/dhcpcd/dhcpcd-hooks/20-dns.conf \\
-	vendor/samsung/__DEVICE__/proprietary/etc/dhcpcd/dhcpcd-hooks/95-configured:system/etc/dhcpcd/dhcpcd-hooks/95-configured \\
-	vendor/samsung/__DEVICE__/proprietary/etc/dhcpcd/dhcpcd-run-hooks:system/etc/dhcpcd/dhcpcd-run-hooks \\
-	vendor/samsung/__DEVICE__/proprietary/etc/dhcpcd/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf
 	
 #
 # Firmware files
