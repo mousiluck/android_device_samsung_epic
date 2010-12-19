@@ -212,9 +212,8 @@ done
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:obj/lib/libcamera.so \\
-	vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:obj/lib/libs3cjpeg.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libtvout.so:obj/lib/libtvout.so
- 
+#	vendor/samsung/__DEVICE__/proprietary/lib/libs3cjpeg.so:obj/lib/libs3cjpeg.so \\ 
 
 
 
