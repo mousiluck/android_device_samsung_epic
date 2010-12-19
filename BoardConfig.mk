@@ -21,9 +21,8 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 
-#USE_CAMERA_STUB := true
-BOARD_OVERLAY_FORMAT_YCbRc_420_SP := true
-BUILD_PV_VIDEO_ENCODERS := 1
+
+
 
 # inherit from the proprietary version
 -include vendor/samsung/SPH-D700/BoardConfigVendor.mk
@@ -42,12 +41,16 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_GLOBAL_CFLAGS += -mtune=cortex-a8
 TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a8
+ARCH_ARM_HAVE_TLS_REGISTER := true
 ANDROID_ARM_LINKER := true
 
-# Sound related defines
-BOARD_USES_ALSA_AUDIO := true
-BUILD_WITH_ALSA_UTILS := true
-ALSA_DEFAULT_SAMPLE_RATE := 44100
+BOARD_USES_HGL := true
+BOARD_USES_OVERLAY := true
+
+USE_CAMERA_STUB := false
+ifeq ($(USE_CAMERA_STUB),false)
+BOARD_CAMERA_LIBRARIES := libcamera
+endif
 
 # WiFi related defines
 
