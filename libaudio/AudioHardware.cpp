@@ -74,13 +74,13 @@ enum {
 // ----------------------------------------------------------------------------
 
 AudioHardware::AudioHardware() :
-    mInit(false),
-    mMicMute(false),
+    mInit(true),
+    mMicMute(true),
     mPcm(NULL),
     mMixer(NULL),
     mPcmOpenCnt(0),
     mMixerOpenCnt(0),
-    mInCallAudioMode(false),
+    mInCallAudioMode(true),
     mInputSource("Default"),
     mBluetoothNrec(true),
     mSecRilLibHandle(NULL),
@@ -89,7 +89,7 @@ AudioHardware::AudioHardware() :
     mDriverOp(DRV_NONE)
 {
     loadRILD();
-    mInit = true;
+    mInit = false;
 }
 
 AudioHardware::~AudioHardware()
