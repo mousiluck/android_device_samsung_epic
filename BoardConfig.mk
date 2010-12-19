@@ -48,9 +48,11 @@ BOARD_USES_HGL := true
 BOARD_USES_OVERLAY := true
 
 USE_CAMERA_STUB := false
-ifeq ($(USE_CAMERA_STUB),false)
-BOARD_CAMERA_LIBRARIES := libcamera
-endif
+USE_OVERLAY_FORMAT_YCbCr_420_SP := TRUE
+# opensource camera from samsung nexus s doesn't compile
+#ifeq ($(USE_CAMERA_STUB),false)
+#BOARD_CAMERA_LIBRARIES := libcamera
+#endif
 
 # WiFi related defines
 
