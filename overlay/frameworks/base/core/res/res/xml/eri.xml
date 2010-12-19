@@ -31,7 +31,7 @@
          <CallPromptId Id="2"
                        CallPromptText="CallPromptId2"/>
          
-         <EriInfo RoamingIndicator="2"
+         <EriInfo RoamingIndicator="0"
                   IconIndex="1"
                   IconMode="0"
                   EriText="Sprint"
