@@ -85,6 +85,9 @@ $(call inherit-product, device/samsung/epic/media_a1026.mk)
 PRODUCT_COPY_FILES += \
 	device/samsung/epic/sec_mm/sec_omx/sec_omx_core/secomxregistry:system/etc/secomxregistry
 
+# firmware for sound
+PRODUCT_COPY_FILES += \
+	device/samsung/epic/prebuilt/libsecril2-client.so:system/lib/libsecril2-client.so
 
 # These are the OpenMAX IL modules
 PRODUCT_PACKAGES += \
