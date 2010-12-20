@@ -89,7 +89,7 @@ AudioHardware::AudioHardware() :
     mDriverOp(DRV_NONE)
 {
     loadRILD();
-    mInit = false;
+    mInit = true;
 }
 
 AudioHardware::~AudioHardware()
