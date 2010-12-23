@@ -53,7 +53,7 @@ BOARD_USES_HGL := true
 BOARD_USES_FROYO := true
 
 #audio defines 
-BOARD_USES_NEXUS_S_AUDIO := false
+BOARD_USES_NEXUS_S_AUDIO := true
 ifeq ($(BOARD_USES_NEXUS_S_AUDIO),false)
 BOARD_USES_ALSA_AUDIO := true
 BUILD_WITH_ALSA_UTILS := true
