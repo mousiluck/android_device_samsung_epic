@@ -25,8 +25,6 @@
 
 #include <hardware_legacy/AudioHardwareBase.h>
 
-#include "secril-client.h"
-
 extern "C" {
     struct pcm;
     struct mixer;
@@ -144,20 +142,7 @@ private:
 
     String8         mInputSource;
     bool            mBluetoothNrec;
-    void*           mSecRilLibHandle;
-    HRilClient      mRilClient;
     bool            mActivatedCP;
-    HRilClient      (*openClientRILD)  (void);
-    int             (*disconnectRILD)  (HRilClient);
-    int             (*closeClientRILD) (HRilClient);
-    int             (*isConnectedRILD) (HRilClient);
-    int             (*connectRILD)     (HRilClient);
-    int             (*setCallVolume)   (HRilClient, SoundType, int);
-    int             (*setCallAudioPath)(HRilClient, AudioPath);
-    int             (*setCallClockSync)(HRilClient, SoundClockCondition);
-    void            loadRILD(void);
-    status_t        connectRILDIfRequired(void);
-
     //  trace driver operations for dump
     int             mDriverOp;
 

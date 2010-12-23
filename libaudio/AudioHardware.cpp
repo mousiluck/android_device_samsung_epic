@@ -74,21 +74,18 @@ enum {
 // ----------------------------------------------------------------------------
 
 AudioHardware::AudioHardware() :
-    mInit(true),
-    mMicMute(true),
+    mInit(false),
+    mMicMute(false),
     mPcm(NULL),
     mMixer(NULL),
     mPcmOpenCnt(0),
     mMixerOpenCnt(0),
-    mInCallAudioMode(true),
+    mInCallAudioMode(false),
     mInputSource("Default"),
     mBluetoothNrec(true),
-    mSecRilLibHandle(NULL),
-    mRilClient(0),
     mActivatedCP(false),
     mDriverOp(DRV_NONE)
 {
-    loadRILD();
     mInit = true;
 }
 
@@ -111,89 +108,12 @@ AudioHardware::~AudioHardware()
         TRACE_DRIVER_OUT
     }
 
-    if (mSecRilLibHandle) {
-        if (disconnectRILD(mRilClient) != RIL_CLIENT_ERR_SUCCESS)
-            LOGE("Disconnect_RILD() error");
-
-        if (closeClientRILD(mRilClient) != RIL_CLIENT_ERR_SUCCESS)
-            LOGE("CloseClient_RILD() error");
-
-        mRilClient = 0;
-
-        dlclose(mSecRilLibHandle);
-        mSecRilLibHandle = NULL;
-    }
-
     mInit = false;
 }
 
 status_t AudioHardware::initCheck()
 {
     return mInit ? NO_ERROR : NO_INIT;
-}
-
-void AudioHardware::loadRILD(void)
-{
-    mSecRilLibHandle = dlopen("libsecril2-client.so", RTLD_NOW);
-
-    if (mSecRilLibHandle) {
-        LOGV("libsecril2-client.so is loaded");
-
-        openClientRILD   = (HRilClient (*)(void))
-                              dlsym(mSecRilLibHandle, "OpenClient_RILD");
-        disconnectRILD   = (int (*)(HRilClient))
-                              dlsym(mSecRilLibHandle, "Disconnect_RILD");
-        closeClientRILD  = (int (*)(HRilClient))
-                              dlsym(mSecRilLibHandle, "CloseClient_RILD");
-        isConnectedRILD  = (int (*)(HRilClient))
-                              dlsym(mSecRilLibHandle, "isConnected_RILD");
-        connectRILD      = (int (*)(HRilClient))
-                              dlsym(mSecRilLibHandle, "Connect_RILD");
-        setCallVolume    = (int (*)(HRilClient, SoundType, int))
-                              dlsym(mSecRilLibHandle, "SetCallVolume");
-        setCallAudioPath = (int (*)(HRilClient, AudioPath))
-                              dlsym(mSecRilLibHandle, "SetCallAudioPath");
-        setCallClockSync = (int (*)(HRilClient, SoundClockCondition))
-                              dlsym(mSecRilLibHandle, "SetCallClockSync");
-
-        if (!openClientRILD  || !disconnectRILD   || !closeClientRILD ||
-            !isConnectedRILD || !connectRILD      ||
-            !setCallVolume   || !setCallAudioPath || !setCallClockSync) {
-            LOGE("Can't load all functions from libsecril2-client.so");
-
-            dlclose(mSecRilLibHandle);
-            mSecRilLibHandle = NULL;
-        } else {
-            mRilClient = openClientRILD();
-            if (!mRilClient) {
-                LOGE("OpenClient_RILD() error");
-
-                dlclose(mSecRilLibHandle);
-                mSecRilLibHandle = NULL;
-            }
-        }
-    } else {
-        LOGE("Can't load libsecril2-client.so");
-    }
-}
-
-status_t AudioHardware::connectRILDIfRequired(void)
-{
-    if (!mSecRilLibHandle) {
-        LOGE("connectIfRequired() lib is not loaded");
-        return INVALID_OPERATION;
-    }
-
-    if (isConnectedRILD(mRilClient)) {
-        return OK;
-    }
-
-    if (connectRILD(mRilClient) != RIL_CLIENT_ERR_SUCCESS) {
-        LOGE("Connect_RILD() error");
-        return INVALID_OPERATION;
-    }
-
-    return OK;
 }
 
 AudioStreamOut* AudioHardware::openOutputStream(
@@ -364,10 +284,7 @@ status_t AudioHardware::setMode(int mode)
         // activate call clock in radio when entering in call or ringtone mode
         if (prevMode == AudioSystem::MODE_NORMAL)
         {
-            if ((!mActivatedCP) && (mSecRilLibHandle) && (connectRILDIfRequired() == OK)) {
-                setCallClockSync(mRilClient, SOUND_CLOCK_START);
-                mActivatedCP = true;
-            }
+            mActivatedCP = true;
         }
 
         if (mMode == AudioSystem::MODE_IN_CALL && !mInCallAudioMode) {
@@ -516,6 +433,7 @@ status_t AudioHardware::setVoiceVolume(float volume)
     LOGD("### setVoiceVolume");
 
     AutoMutex lock(mLock);
+/* FIX this !
     if ( (AudioSystem::MODE_IN_CALL == mMode) && (mSecRilLibHandle) &&
          (connectRILDIfRequired() == OK) ) {
 
@@ -558,7 +476,7 @@ status_t AudioHardware::setVoiceVolume(float volume)
         }
         setCallVolume(mRilClient, type, int_volume);
     }
-
+*/
     return NO_ERROR;
 }
 
@@ -617,10 +535,6 @@ status_t AudioHardware::dump(int fd, const Vector<String16>& args)
     result.append(buffer);
     snprintf(buffer, SIZE, "\tInput source %s\n", mInputSource.string());
     result.append(buffer);
-    snprintf(buffer, SIZE, "\tmSecRilLibHandle: %p\n", mSecRilLibHandle);
-    result.append(buffer);
-    snprintf(buffer, SIZE, "\tmRilClient: %p\n", mRilClient);
-    result.append(buffer);
     snprintf(buffer, SIZE, "\tCP %s\n",
              (mActivatedCP) ? "Activated" : "Deactivated");
     result.append(buffer);
@@ -650,7 +564,7 @@ status_t AudioHardware::setIncallPath_l(uint32_t device)
     LOGV("setIncallPath_l: device %x", device);
 
     // Setup sound path for CP clocking
-    if ((mSecRilLibHandle) &&
+/*    if ((mSecRilLibHandle) &&
         (connectRILDIfRequired() == OK)) {
 
         if (mMode == AudioSystem::MODE_IN_CALL) {
@@ -694,8 +608,8 @@ status_t AudioHardware::setIncallPath_l(uint32_t device)
                     break;
             }
 
-            setCallAudioPath(mRilClient, path);
-
+           setCallAudioPath(mRilClient, path);
+*/
             if (mMixer != NULL) {
                 TRACE_DRIVER_IN(DRV_MIXER_GET)
                 struct mixer_ctl *ctl= mixer_get_control(mMixer, "Voice Call Path", 0);
@@ -708,8 +622,8 @@ status_t AudioHardware::setIncallPath_l(uint32_t device)
                     TRACE_DRIVER_OUT
                 }
             }
-        }
-    }
+//        }
+//    }
     return NO_ERROR;
 }
 
