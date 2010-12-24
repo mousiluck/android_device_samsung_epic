@@ -433,9 +433,7 @@ status_t AudioHardware::setVoiceVolume(float volume)
     LOGD("### setVoiceVolume");
 
     AutoMutex lock(mLock);
-/* FIX this !
-    if ( (AudioSystem::MODE_IN_CALL == mMode) && (mSecRilLibHandle) &&
-         (connectRILDIfRequired() == OK) ) {
+{
 
         uint32_t device = AudioSystem::DEVICE_OUT_EARPIECE;
         if (mOutput != 0) {
@@ -474,9 +472,6 @@ status_t AudioHardware::setVoiceVolume(float volume)
                 type = SOUND_TYPE_VOICE;
                 break;
         }
-        setCallVolume(mRilClient, type, int_volume);
-    }
-*/
     return NO_ERROR;
 }
 
@@ -564,8 +559,6 @@ status_t AudioHardware::setIncallPath_l(uint32_t device)
     LOGV("setIncallPath_l: device %x", device);
 
     // Setup sound path for CP clocking
-/*    if ((mSecRilLibHandle) &&
-        (connectRILDIfRequired() == OK)) {
 
         if (mMode == AudioSystem::MODE_IN_CALL) {
             LOGD("### incall mode route (%d)", device);
@@ -609,7 +602,7 @@ status_t AudioHardware::setIncallPath_l(uint32_t device)
             }
 
            setCallAudioPath(mRilClient, path);
-*/
+
             if (mMixer != NULL) {
                 TRACE_DRIVER_IN(DRV_MIXER_GET)
                 struct mixer_ctl *ctl= mixer_get_control(mMixer, "Voice Call Path", 0);
@@ -622,8 +615,8 @@ status_t AudioHardware::setIncallPath_l(uint32_t device)
                     TRACE_DRIVER_OUT
                 }
             }
-//        }
-//    }
+		}
+
     return NO_ERROR;
 }
 
