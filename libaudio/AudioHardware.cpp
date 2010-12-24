@@ -472,6 +472,7 @@ status_t AudioHardware::setVoiceVolume(float volume)
                 type = SOUND_TYPE_VOICE;
                 break;
         }
+	}
     return NO_ERROR;
 }
 
