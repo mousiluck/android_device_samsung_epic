@@ -440,36 +440,29 @@ status_t AudioHardware::setVoiceVolume(float volume)
             device = mOutput->device();
         }
         int int_volume = (int)(volume * 5);
-        SoundType type;
-
-        LOGD("### route(%d) call volume(%f)", device, volume);
+		LOGD("### route(%d) call volume(%f)", device, volume); 
         switch (device) {
             case AudioSystem::DEVICE_OUT_EARPIECE:
                 LOGD("### earpiece call volume");
-                type = SOUND_TYPE_VOICE;
                 break;
 
             case AudioSystem::DEVICE_OUT_SPEAKER:
                 LOGD("### speaker call volume");
-                type = SOUND_TYPE_SPEAKER;
                 break;
 
             case AudioSystem::DEVICE_OUT_BLUETOOTH_SCO:
             case AudioSystem::DEVICE_OUT_BLUETOOTH_SCO_HEADSET:
             case AudioSystem::DEVICE_OUT_BLUETOOTH_SCO_CARKIT:
                 LOGD("### bluetooth call volume");
-                type = SOUND_TYPE_BTVOICE;
                 break;
 
             case AudioSystem::DEVICE_OUT_WIRED_HEADSET:
             case AudioSystem::DEVICE_OUT_WIRED_HEADPHONE: // Use receive path with 3 pole headset.
                 LOGD("### headset call volume");
-                type = SOUND_TYPE_HEADSET;
                 break;
 
             default:
                 LOGW("### Call volume setting error!!!0x%08x \n", device);
-                type = SOUND_TYPE_VOICE;
                 break;
         }
 	}
@@ -554,55 +547,43 @@ status_t AudioHardware::dump(int fd, const Vector<String16>& args)
 
     return NO_ERROR;
 }
-
 status_t AudioHardware::setIncallPath_l(uint32_t device)
 {
-    LOGV("setIncallPath_l: device %x", device);
-
+	LOGV("setIncallPath_l: device %x", device);
+ 
     // Setup sound path for CP clocking
 
         if (mMode == AudioSystem::MODE_IN_CALL) {
             LOGD("### incall mode route (%d)", device);
-            AudioPath path;
             switch(device){
                 case AudioSystem::DEVICE_OUT_EARPIECE:
                     LOGD("### incall mode earpiece route");
-                    path = SOUND_AUDIO_PATH_HANDSET;
                     break;
 
                 case AudioSystem::DEVICE_OUT_SPEAKER:
                     LOGD("### incall mode speaker route");
-                    path = SOUND_AUDIO_PATH_SPEAKER;
                     break;
 
                 case AudioSystem::DEVICE_OUT_BLUETOOTH_SCO:
                 case AudioSystem::DEVICE_OUT_BLUETOOTH_SCO_HEADSET:
                 case AudioSystem::DEVICE_OUT_BLUETOOTH_SCO_CARKIT:
-                    LOGD("### incall mode bluetooth route %s NR", mBluetoothNrec ? "" : "NO");
-                    if (mBluetoothNrec) {
-                        path = SOUND_AUDIO_PATH_BLUETOOTH;
-                    } else {
-                        path = SOUND_AUDIO_PATH_BLUETOOTH_NO_NR;
-                    }
-                    break;
+				     LOGD("### bt incall mode headset route");
+				break;
 
                 case AudioSystem::DEVICE_OUT_WIRED_HEADPHONE :
                     LOGD("### incall mode headphone route");
-                    path = SOUND_AUDIO_PATH_HEADPHONE;
                     break;
 
                 case AudioSystem::DEVICE_OUT_WIRED_HEADSET :
-                    LOGD("### incall mode headset route");
-                    path = SOUND_AUDIO_PATH_HEADSET;
+				LOGD("### incall mode headset route");
                     break;
 
                 default:
-                    LOGW("### incall mode Error!! route = [%d]", device);
-                    path = SOUND_AUDIO_PATH_HANDSET;
+                    LOGW("### incall mode Error!! route", device);
                     break;
             }
 
-           setCallAudioPath(mRilClient, path);
+
 
             if (mMixer != NULL) {
                 TRACE_DRIVER_IN(DRV_MIXER_GET)
