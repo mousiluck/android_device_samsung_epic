@@ -160,6 +160,7 @@ bin/killmediaserver
 lib/libhardware.so
 bin/vold
 bin/notified_event
+bin/dhcpcd
 lib/libnetutils.so
 
 bin/playlpm
@@ -392,6 +393,7 @@ PRODUCT_COPY_FILES += \\
 	vendor/samsung/__DEVICE__/proprietary/lib/libhardware.so:system/lib/libhardware.so \\
 	vendor/samsung/__DEVICE__/proprietary/bin/vold:system/bin/vold \\
     vendor/samsung/__DEVICE__/proprietary/bin/notified_event:system/bin/notified_event \\
+	vendor/samsung/__DEVICE__/proprietary/bin/dhcpcd:system/bin/dhcpcd \\
 	vendor/samsung/__DEVICE__/proprietary/lib/libnetutils.so:system/lib/libnetutils.so
 
 #
