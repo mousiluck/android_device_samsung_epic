@@ -47,8 +47,8 @@ enum {
 
 enum {
     /* support customed format for zero copy */
-    HAL_PIXEL_FORMAT_YCbCr_420_SP = 0x21,
-    HAL_PIXEL_FORMAT_YCbCr_420_P = 0x13,
+    /*HAL_PIXEL_FORMAT_YCbCr_420_SP = 0x21,*/
+    /*HAL_PIXEL_FORMAT_YCbCr_420_P = 0x13,*/
     HAL_PIXEL_FORMAT_CUSTOM_YCbCr_420_SP = 0x100,
     HAL_PIXEL_FORMAT_CUSTOM_YCbCr_422_I = 0x101,
     HAL_PIXEL_FORMAT_CUSTOM_CbYCrY_422_I = 0x102,
