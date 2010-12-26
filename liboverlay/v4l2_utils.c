@@ -20,7 +20,7 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <cutils/log.h>
-#include <hardware/overlay.h>
+#include "overlays.h"
 #include <linux/videodev.h>
 #include <sys/ioctl.h>
 #include <sys/mman.h>
