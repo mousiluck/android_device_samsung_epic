@@ -284,7 +284,7 @@ status_t AudioHardware::setMode(int mode)
         // activate call clock in radio when entering in call or ringtone mode
         if (prevMode == AudioSystem::MODE_NORMAL)
         {
-            mActivatedCP = true;
+            mActivatedCP = false;
         }
 
         if (mMode == AudioSystem::MODE_IN_CALL && !mInCallAudioMode) {
