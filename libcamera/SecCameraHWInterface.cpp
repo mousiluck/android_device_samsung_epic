@@ -26,7 +26,7 @@
 #include <sys/mman.h>
 
 #if defined(BOARD_USES_OVERLAY)
-#include "overlays.h"
+#include "hardware/overlay.h"
 #include <ui/Overlay.h>
 #define CACHEABLE_BUFFERS       0x1
 #define ALL_BUFFERS_FLUSHED     -66
