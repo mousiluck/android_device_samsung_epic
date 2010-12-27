@@ -30,7 +30,7 @@ LOCAL_SHARED_LIBRARIES := liblog libcutils
 
 LOCAL_SRC_FILES := v4l2_utils.c overlay.cpp
 
-LOCAL_MODULE := overlay.$(TARGET_BOARD_PLATFORM)
+LOCAL_MODULE := copybit.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)
 
