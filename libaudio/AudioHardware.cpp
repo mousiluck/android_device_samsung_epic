@@ -85,16 +85,6 @@ AudioHardware::AudioHardware() :
     mBluetoothNrec(true),
     mDriverOp(DRV_NONE)
 {
-    // audio hardware may started in kernel. make into idle mode first.
-    openMixer_l();
-    if (mMixer != NULL) {
-        struct mixer_ctl *ctl = mixer_get_control(mMixer, "Idle Mode", 0);
-        if (ctl != NULL) 
-            mixer_ctl_select(ctl, "ON");
-    }
-    closeMixer_l();
-    mMixer = NULL;
-
     mInit = true;
 }
 
@@ -929,12 +919,6 @@ void AudioHardware::AudioStreamOutALSA::doStandby_l()
 void AudioHardware::AudioStreamOutALSA::close_l()
 {
     if (mMixer) {
-
-        mRouteCtl = mixer_get_control(mMixer, "Idle Mode", 0);
-        LOGE_IF(mRouteCtl == NULL, "close_l() could not get mixer ctl");
-        if (mRouteCtl != NULL) 
-            mixer_ctl_select(mRouteCtl, "ON");
-
         mHardware->closeMixer_l();
         mMixer = NULL;
         mRouteCtl = NULL;
@@ -956,12 +940,6 @@ status_t AudioHardware::AudioStreamOutALSA::open_l()
     mMixer = mHardware->openMixer_l();
     if (mMixer) {
         LOGV("open playback normal");
-
-        mRouteCtl = mixer_get_control(mMixer, "Idle Mode", 0);
-        LOGE_IF(mRouteCtl == NULL, "open_l() could not get mixer ctl");
-        if (mRouteCtl != NULL) 
-            mixer_ctl_select(mRouteCtl, "Off");
-
         TRACE_DRIVER_IN(DRV_MIXER_GET)
         mRouteCtl = mixer_get_control(mMixer, "Playback Path", 0);
         TRACE_DRIVER_OUT
@@ -1279,12 +1257,6 @@ void AudioHardware::AudioStreamInALSA::doStandby_l()
 void AudioHardware::AudioStreamInALSA::close_l()
 {
     if (mMixer) {
-
-        mRouteCtl = mixer_get_control(mMixer, "Idle Mode", 0);
-        LOGE_IF(mRouteCtl == NULL, "open_l() could not get mixer ctl");
-        if (mRouteCtl != NULL) 
-            mixer_ctl_select(mRouteCtl, "ON");
-
         mHardware->closeMixer_l();
         mMixer = NULL;
         mRouteCtl = NULL;
@@ -1328,12 +1300,6 @@ status_t AudioHardware::AudioStreamInALSA::open_l()
 
     mMixer = mHardware->openMixer_l();
     if (mMixer) {
-
-        mRouteCtl = mixer_get_control(mMixer, "Idle Mode", 0);
-        LOGE_IF(mRouteCtl == NULL, "open_l() could not get mixer ctl");
-        if (mRouteCtl != NULL) 
-            mixer_ctl_select(mRouteCtl, "Off");
-
         TRACE_DRIVER_IN(DRV_MIXER_GET)
         mRouteCtl = mixer_get_control(mMixer, "Voice Memo Path", 0);
         TRACE_DRIVER_OUT
