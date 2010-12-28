@@ -713,16 +713,14 @@ const char *AudioHardware::getInputRouteFromDevice(uint32_t device)
     if (mMicMute) {
         return "Off";
     }
-
-    switch (device) {
-        case AudioSystem::DEVICE_IN_BUILTIN_MIC:
-            return "MAIN";
-        case AudioSystem::DEVICE_IN_WIRED_HEADSET:
-            return "EAR";
-        case AudioSystem::DEVICE_IN_BLUETOOTH_SCO_HEADSET:
-            return "BT";
-        default:
-            return "Off";
+      case AudioSystem::DEVICE_IN_BUILTIN_MIC:
+        return "Main Mic";
+    case AudioSystem::DEVICE_IN_WIRED_HEADSET:
+        return "Hands Free Mic";
+    case AudioSystem::DEVICE_IN_BLUETOOTH_SCO_HEADSET:
+        return "BT Sco Mic";
+    default:
+        return "MIC OFF";
     }
 }
 
