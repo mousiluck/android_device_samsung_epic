@@ -713,6 +713,7 @@ const char *AudioHardware::getInputRouteFromDevice(uint32_t device)
     if (mMicMute) {
         return "Off";
     }
+	 switch (device) {
       case AudioSystem::DEVICE_IN_BUILTIN_MIC:
         return "Main Mic";
     case AudioSystem::DEVICE_IN_WIRED_HEADSET:
