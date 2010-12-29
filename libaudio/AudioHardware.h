@@ -109,7 +109,7 @@ public:
             const char *getOutputRouteFromDevice(uint32_t device);
             const char *getInputRouteFromDevice(uint32_t device);
             const char *getVoiceRouteFromDevice(uint32_t device);
-            const char *getMicPathFromDevice();
+  //          const char *getMicPathFromDevice();
 
             status_t setIncallPath_l(uint32_t device);
             status_t setVoiceMemoPath_l(String8 path);

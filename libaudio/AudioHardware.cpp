@@ -44,7 +44,7 @@ extern "C" {
 namespace android {
 
 const uint32_t AudioHardware::inputSamplingRates[] = {
-        8000, 11025, 16000, 22050, 44100, 48000
+        8000, 11025, 16000, 22050, 44100
 };
 
 //  trace driver operations for dump
@@ -404,7 +404,7 @@ size_t AudioHardware::getInputBufferSize(uint32_t sampleRate, int format, int ch
         return 0;
     }
     if (sampleRate != 8000 && sampleRate != 11025 && sampleRate != 16000 &&
-            sampleRate != 22050 && sampleRate != 32000 && sampleRate != 44100 && sampleRate != 48000) {
+            sampleRate != 22050 && sampleRate != 44100) {
         LOGW("getInputBufferSize bad sample rate: %d", sampleRate);
         return 0;
     }
@@ -547,27 +547,18 @@ status_t AudioHardware::setIncallPath_l(uint32_t device)
             LOGV("setIncallPath_l() Voice Call Path, (%x)", device);
             const char *router = getVoiceRouteFromDevice(device);
             TRACE_DRIVER_IN(DRV_MIXER_SEL)
-            mixer_ctl_select(ctl,router);
+            mixer_ctl_select(ctl, router);
             TRACE_DRIVER_OUT
             //trying to fix input router
             if (router == (const char *)"SPK" || router == (const char *)"RCV") {
-                struct mixer_ctl *ctlMic = mixer_get_control(mMixer, "MIC Path", 0);
-                if (ctlMic != NULL ) {
+                struct mixer_ctl *ctl = mixer_get_control(mMixer, "MIC Path", 0);
+                if (ctl != NULL ) {
                     // First set Mic Path to suitable path
                     TRACE_DRIVER_IN(DRV_MIXER_SEL)
-                    mixer_ctl_select(ctlMic , getMicPathFromDevice());
+                    mixer_ctl_select(ctl, getInputRouteFromDevice(device));
                     TRACE_DRIVER_OUT
                 }
                 //TODO: if possible, we should set each  MIC Path's gain.
-                if (router == (const char *)"SPK") {
-                    ctlMic = mixer_get_control(mMixer, "MIC Gain", 0);
-                    if (ctlMic != NULL ) {
-                        // Second set mic gain to default (33, means index value 5)
-                        TRACE_DRIVER_IN(DRV_MIXER_SET)
-                        mixer_ctl_set(ctlMic , 33);
-                        TRACE_DRIVER_OUT
-                    }
-                }
             }
         }
     }
@@ -674,7 +665,7 @@ const char *AudioHardware::getOutputRouteFromDevice(uint32_t device)
     case AudioSystem::DEVICE_OUT_BLUETOOTH_SCO_CARKIT:
         return "BT";
     default:
-        return "Off";
+        return "OFF";
     }
 }
 
@@ -684,7 +675,6 @@ const char *AudioHardware::getVoiceRouteFromDevice(uint32_t device)
     case AudioSystem::DEVICE_OUT_EARPIECE:
         return "RCV";
     case AudioSystem::DEVICE_OUT_SPEAKER:
-    case (AudioSystem::DEVICE_OUT_EARPIECE|AudioSystem::DEVICE_OUT_SPEAKER):
         return "SPK";
     case AudioSystem::DEVICE_OUT_WIRED_HEADPHONE:
     case AudioSystem::DEVICE_OUT_WIRED_HEADSET:
@@ -694,7 +684,7 @@ const char *AudioHardware::getVoiceRouteFromDevice(uint32_t device)
     case AudioSystem::DEVICE_OUT_BLUETOOTH_SCO_CARKIT:
         return "BT";
     default:
-        return "Off";
+        return "OFF";
     }
 }
 
@@ -707,24 +697,12 @@ const char *AudioHardware::getInputRouteFromDevice(uint32_t device)
       case AudioSystem::DEVICE_IN_BUILTIN_MIC:
         return "Main Mic";
     case AudioSystem::DEVICE_IN_WIRED_HEADSET:
-        return "Hands Free Mic";
+        return "Sub Mic";
     case AudioSystem::DEVICE_IN_BLUETOOTH_SCO_HEADSET:
-        return "BT Sco Mic";
+        return "BT Voice Command";
     default:
-        return "MIC OFF";
+        return "OFF";
     }
-}
-
-const char *AudioHardware::getMicPathFromDevice()
-{
-    uint32_t device = mOutput->device();
-    if (AudioSystem::DEVICE_OUT_SPEAKER & device)
-        return "Sub Mic";
-    else if (AudioSystem::DEVICE_OUT_EARPIECE & device)
-        return "Main Mic";
-    else
-        return "Sub Mic";
-
 }
 
 uint32_t AudioHardware::getInputSampleRate(uint32_t sampleRate)
@@ -1301,21 +1279,11 @@ status_t AudioHardware::AudioStreamInALSA::open_l()
     mMixer = mHardware->openMixer_l();
     if (mMixer) {
         TRACE_DRIVER_IN(DRV_MIXER_GET)
-        mRouteCtl = mixer_get_control(mMixer, "Voice Memo Path", 0);
+        mRouteCtl = mixer_get_control(mMixer, "Voice Call Path", 0);
         TRACE_DRIVER_OUT
     }
 
     if (mHardware->mode() == AudioSystem::MODE_IN_CALL) {
-     
-        struct mixer_ctl *ctlMic = mixer_get_control(mMixer, "MIC Path", 0);
-        if (ctlMic != NULL ) {
-            // set proper Mic Path router when in call.
-            TRACE_DRIVER_IN(DRV_MIXER_SEL)
-            mixer_ctl_select(ctlMic , mHardware->getMicPathFromDevice());
-            TRACE_DRIVER_OUT
-        }
-    }
-    
     const char *route = mHardware->getInputRouteFromDevice(mDevices);
     LOGV("read() wakeup setting route %s", route);
     if (mRouteCtl) {
