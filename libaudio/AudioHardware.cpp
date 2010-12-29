@@ -1291,7 +1291,7 @@ status_t AudioHardware::AudioStreamInALSA::open_l()
         mixer_ctl_select(mRouteCtl, route);
         TRACE_DRIVER_OUT
     }
-
+}
     return NO_ERROR;
 }
 
