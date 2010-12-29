@@ -558,7 +558,6 @@ status_t AudioHardware::setIncallPath_l(uint32_t device)
                     mixer_ctl_select(ctl, getInputRouteFromDevice(device));
                     TRACE_DRIVER_OUT
                 }
-                //TODO: if possible, we should set each  MIC Path's gain.
             }
         }
     }
