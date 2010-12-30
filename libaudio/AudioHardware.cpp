@@ -162,7 +162,6 @@ void AudioHardware::closeOutputStream(AudioStreamOut* out) {
             return;
         }
         spOut = mOutput;
-        spOut->close_l();
         mOutput.clear();
     }
     spOut.clear();
@@ -219,7 +218,6 @@ void AudioHardware::closeInputStream(AudioStreamIn* in) {
             return;
         }
         spIn = mInputs[index];
-        spIn->close_l();
         mInputs.removeAt(index);
     }
     LOGV("AudioHardware::closeInputStream()%p", in);
@@ -547,7 +545,7 @@ status_t AudioHardware::setIncallPath_l(uint32_t device)
             LOGV("setIncallPath_l() Voice Call Path, (%x)", device);
             const char *router = getVoiceRouteFromDevice(device);
             TRACE_DRIVER_IN(DRV_MIXER_SEL)
-            mixer_ctl_select(ctl, router);
+            mixer_ctl_select(ctl,router);
             TRACE_DRIVER_OUT
             //trying to fix input router
             if (router == (const char *)"SPK" || router == (const char *)"RCV") {
