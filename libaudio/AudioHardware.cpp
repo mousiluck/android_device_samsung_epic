@@ -549,11 +549,11 @@ status_t AudioHardware::setIncallPath_l(uint32_t device)
             TRACE_DRIVER_OUT
             //trying to fix input router
             if (router == (const char *)"SPK" || router == (const char *)"RCV") {
-                struct mixer_ctl *ctl = mixer_get_control(mMixer, "MIC Path", 0);
-                if (ctl != NULL ) {
+                struct mixer_ctl *ctlMic = mixer_get_control(mMixer, "MIC Path", 0);
+                if (ctlMic != NULL ) {
                     // First set Mic Path to suitable path
                     TRACE_DRIVER_IN(DRV_MIXER_SEL)
-                    mixer_ctl_select(ctl, getInputRouteFromDevice(device));
+                    mixer_ctl_select(ctlMic , getInputRouteFromDevice(device));
                     TRACE_DRIVER_OUT
                 }
             }
