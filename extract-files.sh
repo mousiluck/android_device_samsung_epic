@@ -162,6 +162,8 @@ bin/vold
 bin/notified_event
 bin/dhcpcd
 lib/libnetutils.so
+bin/mfgloader
+bin/wlservice
 
 bin/playlpm
 bin/charging_mode
@@ -394,8 +396,11 @@ PRODUCT_COPY_FILES += \\
 	vendor/samsung/__DEVICE__/proprietary/bin/vold:system/bin/vold \\
     vendor/samsung/__DEVICE__/proprietary/bin/notified_event:system/bin/notified_event \\
 	vendor/samsung/__DEVICE__/proprietary/bin/dhcpcd:system/bin/dhcpcd \\
+	vendor/samsung/__DEVICE__/proprietary/bin/mfgloader:system/bin/mfgloader \\
+	vendor/samsung/__DEVICE__/proprietary/bin/wlservice:system/bin/wlservice \\
 	vendor/samsung/__DEVICE__/proprietary/lib/libnetutils.so:system/lib/libnetutils.so
 
+	
 #
 # Files for battery charging screen
 #
