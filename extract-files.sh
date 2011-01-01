@@ -397,6 +397,7 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/bin/notified_event:system/bin/notified_event \\
 	vendor/samsung/__DEVICE__/proprietary/bin/dhcpcd:system/bin/dhcpcd \\
 	vendor/samsung/__DEVICE__/proprietary/bin/mfgloader:system/bin/mfgloader \\
+	vendor/samsung/__DEVICE__/proprietary/bin/netcfg:system/bin/netcfg \\
 	vendor/samsung/__DEVICE__/proprietary/bin/wlservice:system/bin/wlservice \\
 	vendor/samsung/__DEVICE__/proprietary/lib/libnetutils.so:system/lib/libnetutils.so
 
