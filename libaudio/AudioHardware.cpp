@@ -1276,11 +1276,11 @@ status_t AudioHardware::AudioStreamInALSA::open_l()
     mMixer = mHardware->openMixer_l();
     if (mMixer) {
         TRACE_DRIVER_IN(DRV_MIXER_GET)
-        mRouteCtl = mixer_get_control(mMixer, "Voice Call Path", 0);
+        mRouteCtl = mixer_get_control(mMixer, "MIC Path", 0);
         TRACE_DRIVER_OUT
     }
 
-    if (mHardware->mode() == AudioSystem::MODE_IN_CALL) {
+    if (mHardware->mode() != AudioSystem::MODE_IN_CALL) {
     const char *route = mHardware->getInputRouteFromDevice(mDevices);
     LOGV("read() wakeup setting route %s", route);
     if (mRouteCtl) {
