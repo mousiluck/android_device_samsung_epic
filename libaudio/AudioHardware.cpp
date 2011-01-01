@@ -434,7 +434,7 @@ status_t AudioHardware::setVoiceVolume(float volume)
             const char* name = (device == AudioSystem::DEVICE_OUT_EARPIECE ? "Output Volume - RCV":"Output Volume - SPK/EAR");
             LOGV("setVoiceVolume() set %s to %f", name, volume);
             TRACE_DRIVER_IN(DRV_MIXER_SET)
-            mixer_ctl_set(ctl, volume * 100);
+            mixer_ctl_set(ctl, volume * 5);
             TRACE_DRIVER_OUT
         }
     }
