@@ -222,6 +222,7 @@ set_perm 0 3004 02755 SYSTEM:bin/ping
 set_perm 1014 2000 0550 SYSTEM:etc/dhcpcd/dhcpcd-run-hooks
 set_perm 0 2000 0550 SYSTEM:etc/init.goldfish.sh
 set_perm_recursive 0 0 0755 06755 SYSTEM:xbin/
+set_perm 0 0 0700  SYSTEM:etc/ppp/pap-secrets
 
 show_progress 0.2 10
 copy_dir PACKAGE:kernel_update TMP:/kernel_update
