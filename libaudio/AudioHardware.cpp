@@ -457,7 +457,7 @@ status_t AudioHardware::setMasterVolume(float volume)
         if (ctl != NULL) {
             LOGV("setMasterVolume() set Output Volume - SPK/EAR to %f", volume);
             TRACE_DRIVER_IN(DRV_MIXER_SET)
-            mixer_ctl_set(ctl, volume * 100);
+            mixer_ctl_set(ctl, volume * 5);
             TRACE_DRIVER_OUT
             return NO_ERROR;
         }
