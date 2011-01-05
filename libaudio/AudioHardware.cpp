@@ -74,13 +74,13 @@ enum {
 // ----------------------------------------------------------------------------
 
 AudioHardware::AudioHardware() :
-    mInit(false),
+    mInit(true),
     mMicMute(false),
     mPcm(NULL),
     mMixer(NULL),
     mPcmOpenCnt(0),
     mMixerOpenCnt(0),
-    mInCallAudioMode(false),
+    mInCallAudioMode(true),
     mInputSource("Default"),
     mBluetoothNrec(true),
     mDriverOp(DRV_NONE)
@@ -425,9 +425,9 @@ status_t AudioHardware::setVoiceVolume(float volume)
         struct mixer_ctl *ctl;
         TRACE_DRIVER_IN(DRV_MIXER_GET)
         if (device == AudioSystem::DEVICE_OUT_EARPIECE)
-            ctl= mixer_get_control(mMixer, "Output Volume - RCV", 0);
+            ctl= mixer_get_control(mMixer, "Output Volume - RCV", 5);
         else
-            ctl= mixer_get_control(mMixer, "Output Volume - SPK/EAR", 0);
+            ctl= mixer_get_control(mMixer, "Output Volume - SPK/EAR", 5);
         TRACE_DRIVER_OUT
 
         if (ctl != NULL) {
@@ -662,7 +662,7 @@ const char *AudioHardware::getOutputRouteFromDevice(uint32_t device)
     case AudioSystem::DEVICE_OUT_BLUETOOTH_SCO_CARKIT:
         return "BT";
     default:
-        return "OFF";
+        return "RCV";
     }
 }
 
@@ -681,14 +681,14 @@ const char *AudioHardware::getVoiceRouteFromDevice(uint32_t device)
     case AudioSystem::DEVICE_OUT_BLUETOOTH_SCO_CARKIT:
         return "BT";
     default:
-        return "OFF";
+        return "RCV";
     }
 }
 
 const char *AudioHardware::getInputRouteFromDevice(uint32_t device)
 {
     if (mMicMute) {
-        return "Off";
+        return "OFF";
     }
 	 switch (device) {
       case AudioSystem::DEVICE_IN_BUILTIN_MIC:
@@ -698,7 +698,7 @@ const char *AudioHardware::getInputRouteFromDevice(uint32_t device)
     case AudioSystem::DEVICE_IN_BLUETOOTH_SCO_HEADSET:
         return "BT Voice Command";
     default:
-        return "OFF";
+        return "Main Mic";
     }
 }
 
